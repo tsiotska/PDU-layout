@@ -1,7 +1,4 @@
 {
-  "name": "preact-redux-example",
-  "version": "1.0.0",
-  "description": "Ready-to-go Preact + Redux starter project, powered by Preact CLI.",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
@@ -12,12 +9,6 @@
   "eslintConfig": {
     "extends": "eslint-config-synacor"
   },
-  "keywords": [
-    "preact",
-    "redux"
-  ],
-  "license": "MIT",
-  "author": "Jason Miller <jason@developit.ca>",
   "devDependencies": {
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
@@ -27,8 +18,9 @@
     "preact-cli": "^2.0.0"
   },
   "dependencies": {
-    "preact": "^8.1.0",
-    "preact-redux": "^1.2.0",
-    "redux": "^3.6.0"
+    "preact": "10.3.4",
+    "preact-redux": "2.1.0",
+    "preact-router": "3.2.1",
+    "redux": "4.0.5"
   }
 }
