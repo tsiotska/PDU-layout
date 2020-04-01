@@ -1,0 +1,11 @@
+  
+{
+	"compilerOptions": {
+		"reactNamespace": "createElement",
+		"moduleResolution": "node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules", "preact-integrations"]
+}
