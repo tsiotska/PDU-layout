@@ -1,0 +1,64 @@
+@import '../../globalStyles/variables/variables';
+@import '../../globalStyles/mixins/mixins';
+
+.header {
+  #flex-space-between;
+  width: 100%;
+  height: 60px;
+  background-color: @fifth-color;
+
+  .logoContainer {
+	#flex-center;
+	height: 100%;
+	width: 20%;
+	padding-left: 20px;
+
+	.logo {
+	  height: 40px;
+	  width: 40px;
+	}
+  }
+}
+
+.rightSide {
+  #flex-space-around;
+  #fontStack2;
+  padding-right: 20px;
+  min-width: 50%;
+}
+
+.element {
+  #flex-center;
+  color: #ffffff;
+
+  .fas, .far {
+	padding-right: 10px;
+  }
+}
+
+#hamburger, #userMenu {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  #hamburger, #userMenu {
+	display: flex;
+	color: @third-color;
+  }
+
+  #hamburger {
+	padding-left: 20px;
+  }
+
+  #userMenu {
+	padding-right: 20px;
+  }
+}

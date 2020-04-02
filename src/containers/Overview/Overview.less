@@ -1,0 +1,47 @@
+@import '../../globalStyles/variables/variables';
+@import '../../globalStyles/mixins/mixins';
+
+.OverviewWrapper {
+  #flex-center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.table {
+  #flex-space-around
+}
+
+.row {
+  display: flex;
+  padding: 5px;
+}
+
+.column {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.field {
+  padding: 10px;
+}
+
+.title{
+  #heading;
+}
+
+//Look here. I want to add label to each first field of table, how can i get constants programmatically?
+.table .column:first-child .row {
+  &:first-child:before {
+	#flex-center;
+	content: 'Phases';
+	padding-right: 5px;
+  }
+
+  .column:first-child .field:before {
+	content: 'label';
+	padding-right: 5px;
+  }
+}

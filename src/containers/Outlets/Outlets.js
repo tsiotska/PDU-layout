@@ -1,9 +1,12 @@
 import { h, Component } from 'preact';
+import './Outlets.less';
 
 export default class Outlets extends Component {
-	render() {
+
+
+	render(props, state) {
 		return (
-			<div>
+			<div className="text">
 				Outlets
 			</div>
 		);
