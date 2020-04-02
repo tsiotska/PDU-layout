@@ -20,7 +20,7 @@
   }
 }
 
-.rightSide {
+.userMenu {
   #flex-space-around;
   #fontStack2;
   padding-right: 20px;
@@ -36,7 +36,7 @@
   }
 }
 
-#hamburger, #userMenu {
+.hamburger {
   display: none;
 }
 
@@ -49,16 +49,23 @@
 }
 
 @media screen and (max-width: 767px) {
-  #hamburger, #userMenu {
+
+  .userMenu {
+	display: none;
+  }
+
+  .hamburger {
 	display: flex;
 	color: @third-color;
   }
 
-  #hamburger {
+  .hamburger:first-child {
 	padding-left: 20px;
   }
 
-  #userMenu {
+  .hamburger:nth-child(2n) {
 	padding-right: 20px;
   }
+
+
 }

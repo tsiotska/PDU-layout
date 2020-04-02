@@ -6,34 +6,35 @@
   width: 200px;
   height: 100vh;
   background-color: @fourth-color;
+  .navList {
+	#flex-column-start;
+	align-items: start;
+	width: 100%;
+
+	.navLink {
+	  display: flex;
+	  height: 50px;
+	  width: 100%;
+	  #fontStack1;
+	  text-decoration: none;
+	  &:hover {
+		background-color: #4c5c62;
+	  }
+	  .contextHolder {
+		display:flex;
+		img,  p, i {
+		  padding-left: 15px;
+		}
+	  }
+
+	}
+	.is-active {
+	  background-color: @primary-color;
+	  color: @fourth-color;
+	}
+  }
 }
 
-.navList {
-  #flex-column-space-around;
-  align-items: start;
-  //height: 100%;
-}
-
-.navLink {
-  display: flex;
-  height: 50px;
-  width: 100%;
-  #fontStack1;
-  text-decoration: none;
-}
-
-.is-active {
-  background-color: @primary-color;
-  color: @fourth-color;
-}
-
-.navLink:hover {
-  background-color: #4c5c62;
-}
-
-.navLink img, .navLink p {
-  padding-left: 15px;
-}
 
 @media screen and (min-width: 1200px) {
 

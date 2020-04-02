@@ -9,8 +9,10 @@
 .dropdown-content {
   position: absolute;
   z-index: 1;
-  display: none;
+  display: flex;
+  flex-direction: column;
 
+  margin-top: 20px;
   padding: 12px 16px;
   min-width: 100px;
 
@@ -18,15 +20,22 @@
 
   color: @fourth-color;
   background-color: @third-color;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.item{
+.item {
   display: flex;
   white-space: nowrap;
   align-items: center
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+//seeming i am cheater)
+@media screen and (max-width: 767px) {
+  .dropdown-content {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	background-color: @fourth-color;
+	color: @primary-color;
+  }
 }
