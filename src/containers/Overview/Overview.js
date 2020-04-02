@@ -1,6 +1,7 @@
 import { Component } from 'preact';
 import './Overview.less';
 import { MockOutlets } from '../../constants';
+import  SystemLayout  from './SystemLayout/SystemLayout';
 
 export default class Overview extends Component {
 	render() {
@@ -12,6 +13,7 @@ export default class Overview extends Component {
 
 				<div className="table">
 					{MockOutlets.data.map((outlet, outletInx) => (
+
 						<div className="column">
 
 							<div className="row phase">
@@ -46,6 +48,8 @@ export default class Overview extends Component {
 
 						</div>))}
 				</div>
+
+				<SystemLayout />
 			</div>
 		);
 	}
