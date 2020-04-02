@@ -12,8 +12,17 @@ const Header = (props) => (
 		</div>
 
 		<div className="rightSide">
-			<Dropdown className="element" iconUrl="fas fa-globe-americas fa-2x" name={'English'}
-								list={['English i am sooo stupittttttttttttt', 'Sorry', 'expansion', '(^_^)', 'Works fine']}
+			<Dropdown
+				className="element"
+				iconUrl="fas fa-globe-americas fa-2x"
+				name={'English'}
+				list={[
+					'English i am sooo stupittttttttttttt',
+					'Sorry',
+					'expansion',
+					'(^_^)',
+					'Works fine'
+				]}
 			/>
 
 			<div className="element">
