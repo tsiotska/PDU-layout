@@ -11,35 +11,40 @@ export default class Overview extends Component {
 				</div>
 
 				<div className="table">
-					{MockOutlets.data.map((outlet) => (<div className="column">
-						<div className="row">
-							<div className="column">
-								<p>Voltage</p>
-								<p>{outlet.Phases.Voltage}</p>
-							</div>
-							<div className="column">
-								<p>Current</p>
-								<p>  {outlet.Phases.Current}</p>
-							</div>
-						</div>
+					{MockOutlets.data.map((outlet, outletInx) => (
+						<div className="column">
 
-						<div className="row">
-							{outlet.Outputs.map((output, index) => (
+							<div className="row phase">
+								<div className="Box">{outletInx + 1}</div>
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x" />
-									<p>{'Output_' + index}</p></div>
-							))}  </div>
+									<div className="label">Voltage</div>
+									<div>{outlet.Phases.Voltage}</div>
+								</div>
+								<div className="column">
+									<div className="label">Current</div>
+									<div> {outlet.Phases.Current}</div>
+								</div>
 
-						<div className="row">
-							{outlet.Outputs.map((output) => (
-								<div className="column">
-									{Object.entries(output).map((field) => (<div className="field">
-										{field[1]}
-									</div>))
-									}
-								</div>))}
-						</div>
-					</div>))}
+							</div>
+
+							<div className="row ">
+								{outlet.Outputs.map((output, outputInx) => (
+									<div className="column">
+										<i className="fas fa-charging-station fa-2x" />
+										<p>{'Output_' + outputInx}</p></div>
+								))}  </div>
+
+							<div className="row ">
+								{outlet.Outputs.map((output) => (
+									<div className="column">
+										{Object.entries(output).map((field) => (<div className="field">
+											{field[1]}
+										</div>))
+										}
+									</div>))}
+							</div>
+
+						</div>))}
 				</div>
 			</div>
 		);

@@ -6,46 +6,94 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  .title{
+
+  .title {
 	#heading;
   }
+
   .table {
-	#flex-space-around
-  }
-  .column {
-	border: 2px solid red;
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
-	.row {
+	#flex-space-around;
+
+	.column {
+	  //border: 2px solid red;
 	  display: flex;
-	  padding: 5px;
-	  .field {
-		padding: 10px;
+	  flex-direction: column;
+
+	  .row {
+		margin: 25px;
+		display: flex;
+		justify-content: space-between;
+
+		.column {
+		  #flex-start;
+
+		  .field {
+			margin: 10px;
+		  }
+		}
+	  }
+
+	  .phase {
+		align-items: flex-end;
+		border-bottom: 3px solid #E3BE3F;
+		padding-right: 50px;
+
+		.column {
+		  margin-left: 25px;
+		}
+
+		.Box {
+		  #flex-center;
+		  width: 27px;
+		  height: 37px;
+		  background-color: #E3BE3F;
+		}
+
+		.label {
+		  #fontStack1;
+		}
+	  }
+
+	  .row:last-child .column:nth-child(2n - 1) {
+		background-color: @third-color;
 	  }
 	}
   }
 }
 
+//How to simplify? I want to put list loop in one cycle
 
-
-
-
-
-
-
-
-
-//Look here. I want to add label to each first field of table, how can i get constants programmatically?
+@labels: 'Phases' 'Outputs' 'State' 'Voltage' 'Current' 'Active Power';
 .table .column:first-child .row {
-  &:first-child:before {
-	#flex-center;
-	content: 'Phases';
-	padding-right: 5px;
+  .label-loop(2);
+  .label-loop (@i) when (@i > 0) {
+	&:nth-child(@{i}):before {
+	  @label: extract(@labels, @i);
+	  content: @label;
+	  #flex-center;
+	  position: absolute;
+	  margin-left: -80px;
+	  margin-top: -20px;
+	  padding-right: 5px;
+	  color: @text-muted;
+	}
+	.label-loop(@i - 1);
   }
 
-  .column:first-child .field:before {
-	content: 'label';
-	padding-right: 5px;
+  .label2-loop(4);
+  .label2-loop (@i) when (@i > 0) {
+	.column:first-child .field:nth-child(@{i}):before {
+	  @label: extract(@labels, @i + 2);
+	  content: @label;
+	  #flex-center;
+	  position: absolute;
+	  margin-left: -90px;
+
+	  padding-right: 5px;
+	  color: @text-muted;
+	}
+	.label2-loop(@i - 1);
   }
 }
+
+
