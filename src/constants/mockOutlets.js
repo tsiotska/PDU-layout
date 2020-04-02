@@ -1,4 +1,4 @@
-export const Outlets = {
+const MockOutlets = {
 	data: [
 		{
 			Phases: { Voltage: '220V', Current: '168A' },
@@ -64,3 +64,4 @@ export const Outlets = {
 			}]
 		}]
 };
+export default MockOutlets;
