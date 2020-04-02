@@ -4,3 +4,4 @@ export { default as Overview } from './Overview/Overview';
 export { default as Protocols } from './Protocols/Protocols';
 export { default as Settings } from './Settings/Settings';
 export { default as Users } from './Users/Users';
+export { default as Auth } from './Auth/Auth';

@@ -1,0 +1,42 @@
+@import '../../globalStyles/variables/variables';
+@import '../../globalStyles/mixins/mixins';
+
+.AuthWrapper {
+  #flex-center;
+  height: 100vh;
+  width: 100%;
+
+  .loginForm {
+	height: 450px;
+	width: 450px;
+	.column {
+	  #flex-column-space-around;
+	  height: 100%;
+	  .logoContainer {
+		#flex-center;
+		width: 100%;
+		height: 150px;
+		padding-left: 20px;
+
+		.logo {
+		  height: 40px;
+		  width: 40px;
+		}
+	  }
+	  .fields{
+		#flex-column-space-around;
+		height: 100%;
+		width: 100%;
+		background-color: @third-color;
+
+		.title{
+		  font-family: @heading-font-family;
+		  font-size: 20px;
+		  font-weight: 500;
+		  color: @fourth-color;
+		}
+	  }
+	}
+  }
+}
+

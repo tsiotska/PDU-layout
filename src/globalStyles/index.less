@@ -1,6 +1,5 @@
 @import './variables/variables';
 @import './mixins/mixins';
-
 @import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
@@ -17,18 +16,27 @@ html, body {
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.Wrapper{
+.Wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  .Components{
+
+  .Components {
 	display: flex;
+	align-self: flex-start;
+	width: 100vw;
+
+	.Page {
+	  #flex-center;
+	  width: 100%;
+	}
   }
 }
 
