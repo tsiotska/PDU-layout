@@ -2,33 +2,91 @@
 @import '../../globalStyles/mixins/mixins';
 
 .OutletsWrapper {
-  #flex-center;
+  display: flex;
   flex-direction: column;
-  width: 100vw;
+  height: 100%;
+
+  .row {
+	#flex-space-around;
+	width: 100%;
+
+  }
+
+  .column {
+	#flex-column-space-around;
+  }
 
   .container {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
 
-	.row:first-child {
+	> .row:nth-child(1) {
 	  border-top: 2px solid @third-color;
 	  border-bottom: 2px solid @third-color;
+	  padding: 20px;
+
 	  .column {
 		width: 200px;
+
 		.description {
 		  #fontStack6;
 		}
 	  }
 	}
 
-	.row {
-	  #flex-space-around;
+	> .row:nth-child(2) {
+	  height: 250px;
+	  align-items: unset;
+	  padding: 20px;
 
 	  .column {
-		#flex-column-start;
+		#flex-column-space-around;
+		height: 100%;
+	  }
 
+	  > .row {
+		.labels {
+		  display: none;
+		}
+
+		.column .column {
+		  height: auto;
+		  justify-content: flex-start;
+		}
 	  }
 	}
   }
 }
+
+@media screen and (max-width: 767px) {
+  .OutletsWrapper {
+	.container {
+	  display: flex;
+	  flex-direction: column;
+
+	  > .row:nth-child(1) {
+		flex-direction: column;
+	  }
+
+	  > .row:nth-child(2) {
+		flex-direction: column;
+		justify-content: space-around;
+		height: 500px;
+
+		 .labels {
+		  display: none;
+		}
+
+		 .row {
+		  height: 100%;
+
+		  .labels {
+			display: flex;
+		  }
+		}
+	  }
+	}
+  }
+}
+
+
