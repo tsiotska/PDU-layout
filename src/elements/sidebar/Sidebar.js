@@ -4,6 +4,9 @@ import './Sidebar.less';
 import {Dropdown} from '../../patterns';
 
 export default function Sidebar(props) {
+	const closeSidebar = () => {
+		props.sidebarRef.current.classList.remove('sidebarVisible');
+	};
 	//Very hardcoded as you asked -_-
 	return (<div ref={props.sidebarRef} className="sidebar">
 
@@ -11,34 +14,34 @@ export default function Sidebar(props) {
 			props.render === SIDEBAR_TYPE.ROUTES
 				?
 				<nav className="navList">
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.OVERVIEW}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.OVERVIEW}>
 						<div className="contextHolder">
 							/*<img src={'/'}  />*/
 							<p>Overview</p>
 						</div>
 					</Link>
 
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.OUTLETS}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.OUTLETS}>
 						<div className="contextHolder">  /*<img src={'/'}  />*/
 							<p>Outlets</p></div>
 					</Link>
 
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.PROTOCOLS}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.PROTOCOLS}>
 						<div className="contextHolder">/*<img src={'/'}  />*/
 							<p>API Protocols</p></div>
 					</Link>
 
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.LOGS}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.LOGS}>
 						<div className="contextHolder">  /*<img src={'/'}  />*/
 							<p>Logs</p></div>
 					</Link>
 
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.USERS}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.USERS}>
 						<div className="contextHolder">  /*<img src={'/'}  />*/
 							<p>Users</p></div>
 					</Link>
 
-					<Link activeClassName="is-active" className="navLink" href={ROUTE.SETTINGS}>
+					<Link  onClick={() => closeSidebar()}activeClassName="is-active" className="navLink" href={ROUTE.SETTINGS}>
 						<div className="contextHolder">  /*<img src={'/'}  />*/
 							<p>Settings</p></div>
 					</Link>
