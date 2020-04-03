@@ -15,7 +15,6 @@ export default class Overview extends Component {
 					{MockOutlets.data.map((outlet, outletInx) => (
 
 						<div className="column">
-
 							<div className="row phase">
 								<div className="Box">{outletInx + 1}</div>
 								<div className="column">

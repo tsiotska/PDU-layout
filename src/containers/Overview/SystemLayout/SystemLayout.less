@@ -3,6 +3,9 @@
 
 .systemDescription {
   .container {
+	#flex-start;
+	//align-items: flex-start;
+	flex-wrap: wrap;
 	> .column {
 	  margin: 20px;
 	}
@@ -10,7 +13,6 @@
 
   .row {
 	display: flex;
-	//margin: 5px;
   }
 
   .column {
@@ -24,6 +26,7 @@
   }
 
   .label {
+	min-width: 100px; //Remove to break aligning text
 	#fontStack2;
 	margin: 5px;
   }

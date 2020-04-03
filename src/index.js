@@ -51,22 +51,22 @@ class Main extends Component {
 				<div className="Components">
 					<Sidebar sidebarRef={this.sidebarRef} render={currentSidebar}/>
 
-					<div className="Page">
+					<div className="pageScroll">
+						<div className="page">
+							<Provider store={store}>
 
-						<Provider store={store}>
+								<Router>
+									<Auth path={ROUTE.LOGIN}/>
+									<Outlets path={ROUTE.OUTLETS} default/>
+									<Overview path={ROUTE.OVERVIEW}/>
+									<Protocols path={ROUTE.PROTOCOLS}/>
+									<Settings path={ROUTE.SETTINGS}/>
+									<Users path={ROUTE.USERS}/>
+									<Logs path={ROUTE.LOGS}/>
 
-							<Router>
-								<Auth path={ROUTE.LOGIN}/>
-								<Outlets path={ROUTE.OUTLETS} default/>
-								<Overview path={ROUTE.OVERVIEW}/>
-								<Protocols path={ROUTE.PROTOCOLS}/>
-								<Settings path={ROUTE.SETTINGS}/>
-								<Users path={ROUTE.USERS}/>
-								<Logs path={ROUTE.LOGS}/>
-
-							</Router>
-						</Provider>
-
+								</Router>
+							</Provider>
+						</div>
 					</div>
 				</div>
 			</div>);
