@@ -1,9 +1,10 @@
 @import '../../globalStyles/variables/variables';
+@import '../../globalStyles/mixins/mixins';
 
 .dropdown {
   position: relative;
-  display: inline-block;
-  color: #ffffff;
+  #flex-center;
+  color: @primary-color;
 }
 
 .dropdown-content {
@@ -34,8 +35,10 @@
   .dropdown-content {
 	width: 100vw;
 	height: 100vh;
+	margin-top: 20px;
 	padding: 0;
-	background-color: @fourth-color;
-	color: @primary-color;
+	border-radius: 0;
+	background-color: @primary-color;
+	color: @fourth-color;
   }
 }

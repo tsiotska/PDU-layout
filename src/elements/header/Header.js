@@ -11,18 +11,18 @@ const Header = (props) => (
 		</div>
 
 		<div className="userMenu">
-			<Dropdown
-				className="element"
-				iconUrl="fas fa-globe-americas fa-2x"
-				name={'English'}
-				list={[
-					'English ',
-					'.....................................',
-					'Sorry',
-					'(^_^)',
-					'Works fine'
-				]}
-			/>
+			<div className="element">
+				<Dropdown
+					iconUrl="fas fa-globe-americas fa-2x"
+					name={'English'}
+					list={[
+						'English ',
+						'.....................................',
+						'Sorry',
+						'(^_^)',
+						'Works fine'
+					]}
+				/></div>
 
 			<div className="element">
 				<i className="far fa-user-circle fa-2x" />

@@ -1,36 +1,44 @@
 @import '../../../globalStyles/variables/variables';
 @import '../../../globalStyles/mixins/mixins';
 
-.heading {
-  #fontStack4;
-}
+.systemDescription {
+  .container {
+	> .column {
+	  margin: 20px;
+	}
+  }
 
-.label {
-  #fontStack2;
-}
-
-.value {
-  #fontStack2;
-  color: @text-visible;
-}
-
-.systemDescription{
   .row {
 	display: flex;
+	//margin: 5px;
+  }
+
+  .column {
+	display: flex;
+	flex-direction: column;
+  }
+
+  .heading {
+	#fontStack4;
 	margin: 5px;
   }
 
-  .column{
-	display: flex;
-	flex-direction: column;
-	margin: 20px;
-  };
+  .label {
+	#fontStack2;
+	margin: 5px;
+  }
+
+  .value {
+	#fontStack2;
+	color: @text-visible;
+	margin: 5px;
+  }
 }
 
+
 @media screen and (max-width: 767px) {
-  .systemDescription{
-	.container {
-	  flex-direction: column;
-	  justify-content: space-around;
-	}}
+  .systemDescription .container {
+	flex-direction: column;
+	justify-content: space-around;
+  }
 }

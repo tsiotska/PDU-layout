@@ -20,26 +20,24 @@
 .OverviewWrapper {
   #flex-center;
   flex-direction: column;
-  height: 100%;
   width: 100%;
 
   .title {
 	#fontStack3;
+	align-self: flex-start;
   }
 
   .table {
 	#flex-space-around;
 
 	.column {
-	  //border: 2px solid red;
 	  display: flex;
 	  flex-direction: column;
 
 	  .row {
-		margin: 10px 25px;
-
 		display: flex;
 		justify-content: space-between;
+		margin: 10px 25px;
 
 		.column {
 		  #flex-start;
@@ -113,9 +111,35 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .OverviewWrapper {
+	.table {
+	  flex-wrap: wrap;
+
+	  .column {
+		.row:nth-child(n):before {
+		  content: '';
+		}
+
+		.row {
+		  margin: 10px 5px;
+		  .column:first-child .field:nth-child(n):before {
+			content: '';
+		  }
+		}
+	  }
+
+	  .phase {
+		padding-right: 30px;
+	  }
+	}
+  }
+}
 
 @media screen and (max-width: 767px) {
-  .OverviewWrapper .table{
-	flex-direction: column;
+  .OverviewWrapper {
+	.table {
+	  flex-direction: column;
+	}
   }
 }

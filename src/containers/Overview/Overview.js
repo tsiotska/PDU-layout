@@ -8,7 +8,7 @@ export default class Overview extends Component {
 		return (
 			<div className="OverviewWrapper">
 				<div className="title">
-					Overview
+					Outlets
 				</div>
 
 				<div className="table">

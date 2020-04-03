@@ -52,19 +52,21 @@ class Main extends Component {
 					<Sidebar sidebarRef={this.sidebarRef} render={currentSidebar}/>
 
 					<div className="Page">
-					<Provider store={store}>
 
-						<Router>
-							<Auth path={ROUTE.LOGIN}/>
-							<Outlets path={ROUTE.OUTLETS} default/>
-							<Overview path={ROUTE.OVERVIEW}/>
-							<Protocols path={ROUTE.PROTOCOLS}/>
-							<Settings path={ROUTE.SETTINGS}/>
-							<Users path={ROUTE.USERS}/>
-							<Logs path={ROUTE.LOGS}/>
+						<Provider store={store}>
 
-						</Router>
-					</Provider>
+							<Router>
+								<Auth path={ROUTE.LOGIN}/>
+								<Outlets path={ROUTE.OUTLETS} default/>
+								<Overview path={ROUTE.OVERVIEW}/>
+								<Protocols path={ROUTE.PROTOCOLS}/>
+								<Settings path={ROUTE.SETTINGS}/>
+								<Users path={ROUTE.USERS}/>
+								<Logs path={ROUTE.LOGS}/>
+
+							</Router>
+						</Provider>
+
 					</div>
 				</div>
 			</div>);
