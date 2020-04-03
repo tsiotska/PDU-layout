@@ -36,7 +36,7 @@ export default class Outlets extends Component {
 						</div>
 						<div className="column">
 							<RadioButton label="Delayed" name="state" />
-							<p>Initially, both flip-flops are reset,
+							<p className="description">Initially, both flip-flops are reset,
 								and the Q output of the second flip-flop is high,
 								so the 74HC03 pulls the EN line to ground</p>
 						</div>
@@ -72,7 +72,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x on"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -81,7 +81,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x on"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -90,7 +90,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x on"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -115,7 +115,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x on"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -124,7 +124,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x error"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -133,7 +133,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x overload"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -158,7 +158,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x off"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -167,7 +167,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x off"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -176,7 +176,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x"/>
+									<i className="fas fa-charging-station fa-2x off"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
