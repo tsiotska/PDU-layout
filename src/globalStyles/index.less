@@ -49,21 +49,15 @@ html, body {
   }
 }
 
-/* every row and column are specific and declared in each file.
-   use mixins with flexbox
+/* every row and column are specific and redeclared in each file.
+There are default declaration */
 .row {
-  #flex-space-around;
+  display: flex;
 }
 
 .column {
-  #flex-column-space-around;
-  align-items: flex-start;
-}
-*/
-
-.title {
-  #fontStack3;
-  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 /* states */
@@ -81,4 +75,9 @@ html, body {
 
 .off {
   color: #d7d7d7;
+}
+
+.title {
+  #fontStack3;
+  align-self: flex-start;
 }

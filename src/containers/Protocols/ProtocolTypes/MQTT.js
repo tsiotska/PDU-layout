@@ -7,23 +7,23 @@ const MQTT = () => (
 		<form className="column">
 
 			<div className="row">
-				<Switch /> <p>Enable MQTT</p>
+				<div>	<Switch /></div> <div><p>Enable MQTT</p></div>
 			</div>
 
 			<div className="row alignMQTT">
-				<p>MQTT mode</p> <Select class="select long" options={['Generic', 'MS Azure']}/>
+				<div><p>MQTT mode</p></div> <div><Select class="select long" options={['Generic', 'MS Azure']}/></div>
 			</div>
 
 			<div className="row alignMQTT">
-				<p>Broker Host</p> <Input class="formInput long" value="example.com"/>
+				<div>	<p>Broker Host</p> </div> <div><Input class="formInput long" value="example.com"/> </div>
 			</div>
 
 			<div className="row alignMQTT">
-				<p>Broker Port </p> <Input class="formInput short" value="1883"/>
+				<div>	<p>Broker Port </p></div> <div><Input class="formInput short" value="1883"/></div>
 			</div>
 
 			<div className="row">
-				<Checkbox /> <p>Use credentials</p>
+				<div>	<Checkbox /></div> <div><p>Use credentials</p></div>
 			</div>
 
 			<div className="row alignMQTT">
