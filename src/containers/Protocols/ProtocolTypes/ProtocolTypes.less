@@ -1,3 +1,40 @@
 @import '../../../globalStyles/variables/variables';
 @import '../../../globalStyles/mixins/mixins';
 
+.FormWrapper {
+  padding-left: 40px;
+  padding-top: 20px;
+
+  form.column {
+	#flex-column-space-around;
+	align-items: flex-start;
+	width: 400px;
+
+	.row {
+	  display: flex;
+	  align-items: center;
+	  width: 100%;
+	  margin-top: 15px;
+
+	  p:first-child {
+		color: @text-muted;
+	  }
+
+	  p:nth-child(2) {
+		margin-left: 10px;
+	  }
+	}
+
+	.alignSNMP {
+	  p {
+		min-width: 110px;
+	  }
+	}
+
+	.alignMQTT {
+	  p {
+		min-width: 80px;
+	  }
+	}
+  }
+}

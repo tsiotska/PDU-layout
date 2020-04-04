@@ -13,9 +13,9 @@ export default function Auth(props) {
 
 				<div className="fields">
 					<p className="title">Login Now</p>
-					<Input placeholder={'User Name'} type={'text'} />
-					<Input placeholder={'Password'} type={'password'} />
-					<Button type={"submit"} value={"Login"}/>
+					<Input class={'authInput long'} placeholder={'User Name'} type={'text'} />
+					<Input class={'authInput long'} placeholder={'Password'} type={'password'} />
+					<Button class={'button'} type={'submit'} value={'Login'} />
 				</div>
 			</div>
 		</form>

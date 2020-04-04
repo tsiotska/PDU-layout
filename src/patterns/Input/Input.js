@@ -1,7 +1,7 @@
 import './Input.less';
 
 const Input = (props) => (
-	<input className="input" type={props.type} placeholder={props.placeholder} />
+	<input className={props.class} type={props.type} placeholder={props.placeholder} value={props.value} />
 );
 
 export default Input;
