@@ -16,8 +16,8 @@
 	  // margin-left: 50px;
 
 	  //hardcoded with px
-	  &:first-child { //add 120px to column with label and give 120px for label size or margin
-		width: 320px; // calc(~'250px + 50px')
+	  &:first-child { //add 80 to column with label and give 80 for label size or margin
+		width: 320px;
 
 		.row:nth-child(3) .column:first-child {
 		  width: 160px;
@@ -29,7 +29,6 @@
 	  }
 
 	  > .row {
-		justify-content: space-between;
 		width: 100%;
 		margin: 10px 25px;
 
@@ -129,7 +128,7 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .OverviewWrapper {
 	.table {
-	  flex-wrap: wrap;
+	  // flex-wrap: wrap;
 	}
   }
 }
@@ -138,6 +137,47 @@
   .OverviewWrapper {
 	.table {
 	  flex-direction: column;
+
+	  >.column {
+		width: 320px;
+
+		> .row:nth-child(3) .column:first-child {
+		  width: 160px;
+
+		  .field {
+			width: 80px;
+		  }
+		}
+
+		> .row {
+		  .label-loop(2);
+		  .label-loop (@i) when (@i > 0) {
+			&:nth-child(@{i}):before {
+			  @label: extract(@labels, @i);
+			  content: @label;
+			  #flex-center;
+			  justify-content: flex-start;
+			  color: @text-muted;
+			  width: 80px;
+			}
+			.label-loop(@i - 1);
+		  }
+
+		  .label2-loop(4);
+		  .label2-loop (@i) when (@i > 0) {
+			.column:first-child .label:nth-child(@{i}):before {
+			  @label: extract(@labels, @i + 2);
+			  content: @label;
+			  color: @text-muted;
+			  #flex-center;
+			  justify-content: flex-start;
+			  width: 80px;
+			}
+			.label2-loop(@i - 1);
+		  }
+	  }
+	  }
 	}
   }
 }
+

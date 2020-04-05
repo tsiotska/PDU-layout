@@ -1,66 +1,14 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
+//panel styles is global styles.
 
 .ProtocolsWrapper {
   #flex-start;
   width: 100%;
   height: 100%;
-
-  .panel {
-	#flex-column-start;
-	width: 200px;
-	height: 100%;
-	background-color: #dfe7ea;
-
-	.nav {
-	  #flex-column-start;
-	  width: 100%;
-	  height: 100%;
-	}
-
-	.tab, .title {
-	  #flex-start;
-	  align-items: center;
-	  height: 50px;
-	  width: 100%;
-	  padding-left: 15px;
-	}
-
-	.title {
-	  #fontStack3
-	}
-
-	.tab {
-	  #fontStack5;
-	  text-decoration: none;
-	  background-color: transparent;
-
-	  &:hover {
-		color: @primary-color;
-		background-color: @fourth-color;
-	  }
-	}
-
-	.is-active {
-	  #fontStack5;
-	  background-color: @primary-color;
-	}
-  }
 }
 
 @media screen and (max-width: 767px) {
   .ProtocolsWrapper {
 	#flex-column-start;
-
-	.panel {
-	  justify-content: space-between;
-	  width: 100%;
-	  height: fit-content;
-
-	  .nav {
-		flex-direction: row;
-		align-items: flex-end;
-	  }
-	}
   }
 }

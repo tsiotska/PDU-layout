@@ -1,8 +1,9 @@
-import {Component} from 'preact';
+import { Component } from 'preact';
 import './Protocols.less';
-//import {SNMPv2, MQTT, REST} from '../index';
-import {Link} from 'preact-router/match';
-//import {Router, Route} from 'preact-router';
+import { SNMPv2, MQTT, REST } from '../index';
+import { Link } from 'preact-router/match';
+import { Route, Router } from 'preact-router';
+
 
 export default class Protocols extends Component {
 	render() {
@@ -12,14 +13,16 @@ export default class Protocols extends Component {
 					<div className="title">API Protocols</div>
 					<div className="nav">
 						<Link href={'/protocols/SNMPv2'} activeClassName="is-active" className="tab">SNMPv2</Link>
-						<Link href={'/protocols/MQTT'} activeClassName="is-active" className="tab">MQTT</Link>
-						<Link href={'/protocols/REST'} activeClassName="is-active" className="tab">REST</Link>
+						<Link href={'/MQTT'} activeClassName="is-active" className="tab">MQTT</Link>
+						<Link href={'/REST'} activeClassName="is-active" className="tab">REST</Link>
 					</div>
 				</div>
 
+				<Router>
+					<Route path="/protocols/SNMPv2" component={SNMPv2} />
+				</Router>
 
-			</div>
-		);
+			</div>);
 	}
 }
 

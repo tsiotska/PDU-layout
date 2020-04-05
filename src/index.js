@@ -6,7 +6,7 @@ import store from './store';
 import './globalStyles/index.less';
 
 import { ROUTE, SIDEBAR_TYPE } from './constants';
-import { Logs, Outlets, Overview, Protocols, Settings, Users, Auth, SNMPv2, MQTT, REST } from './containers';
+import { Logs, Outlets, Overview, Protocols, Settings, Users, Auth, SNMPv2, MQTT, REST, Admin } from './containers';
 import { Header, Sidebar } from './elements';
 
 
@@ -55,25 +55,28 @@ class Main extends Component {
 
 					<div className="pageScroll">
 						<div className="page">
+
 							<Provider store={store}>
 
 								<Router>
 									<Auth path={ROUTE.LOGIN} />
-									<Outlets path={ROUTE.OUTLETS} default />
+									<Outlets path={ROUTE.OUTLETS} />
 									<Overview path={ROUTE.OVERVIEW} />
+
 									<Protocols path={ROUTE.PROTOCOLS} />
 
-									<SNMPv2 path="protocols/SNMPv2" />
-									<MQTT path="protocols/MQTT" />
-									<REST path="protocols/REST" />
 
 									<Settings path={ROUTE.SETTINGS} />
-									<Users path={ROUTE.USERS} />
-									<Logs path={ROUTE.LOGS} />
 
+									<Users path={ROUTE.USERS} />
+									<Admin path="/users/admin" />
+
+									<Logs path={ROUTE.LOGS} />
 								</Router>
+
 							</Provider>
 						</div>
+
 					</div>
 				</div>
 			</div>);
