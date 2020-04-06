@@ -1,0 +1,19 @@
+@import '../../globalStyles/mixins/mixins';
+
+.SettingsWrapper {
+  #flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+  .SettingsWrapper {
+	flex-direction: column;
+	align-items: center;
+
+	.NetworkWrapper, .DateWrapper, .FirmwareWrapper {
+	  padding: 3vh 3vw;
+	}
+  }
+}

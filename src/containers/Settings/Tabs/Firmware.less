@@ -1,0 +1,51 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.FirmwareWrapper {
+  width: 400px;
+  padding: 20px 40px;
+
+  > .column {
+	> .row {
+	  align-items: center;
+
+	  .label {
+		#fontStack2;
+		width: 100%;
+	  }
+
+	  .value {
+		width: 100%
+	  }
+
+	  &:last-child {
+		margin-top: 20px;
+	  }
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirmwareWrapper {
+	#flex-column-start;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	> .column {
+	  height: 100%;
+
+	  > .row {
+		flex-direction: column;
+
+		&:last-child {
+		  margin-top: auto;
+
+		  .button {
+			width: 280px;
+		  }
+		}
+	  }
+	}
+  }
+}

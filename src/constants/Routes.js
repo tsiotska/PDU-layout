@@ -1,23 +1,11 @@
 const ROUTE = {
 	OVERVIEW: '/overview',
 	OUTLETS: '/outlets',
-	PROTOCOLS: '/protocols',
+	PROTOCOLS: '/protocols/:page?',
 	LOGS: '/logs',
-	USERS: '/users',
-	SETTINGS: '/settings',
+	USERS: '/users/:page?',
+	SETTINGS: '/settings/:page?',
 	LOGIN: '/login'
 };
-
-/*
-const ROUTE = {
- 	Overview: { path: '/overview', iconUrl: '' },
-	Outlets: { path: '/outlets',  iconUrl: '' },
-	Protocols: { path: '/protocols', iconUrl: '' },
-	Logs: { path: '/logs', iconUrl: '' },
-	Users: { path: '/users', iconUrl: '' },
-	Settings: { path: '/settings', iconUrl: '' },
-	Login: { path: '/login', iconUrl: '' }
-};
-*/
 
 export default ROUTE;

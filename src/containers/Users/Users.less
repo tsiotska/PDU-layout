@@ -4,13 +4,38 @@
   #flex-start;
   width: 100%;
   height: 100%;
+
+  .AdminWrapper {
+	width: 450px;
+	padding: 20px 40px;
+
+	.column {
+	  .inputGroup {
+		.row {
+		  #flex-space-between;
+
+		  .label {
+			color: @text-muted;
+		  }
+		}
+	  }
+
+	  .switchGroup {
+		.row {
+		  #flex-start-centered;
+
+		  .label {
+			margin-left: 10px;
+		  }
+		}
+	  }
+	  >.row:last-child{ //Button
+		margin-top: 20px;
+	  }
+	}
+  }
 }
 
-//Include its in parent
-.AdminWrapper {
-
-  padding: 20px;
-}
 @media screen and (max-width: 767px) {
   .UsersWrapper {
 	#flex-column-start;

@@ -1,13 +1,12 @@
-import {Link} from 'preact-router/match';
-import {ROUTE, SIDEBAR_TYPE} from '../../constants';
+import { Link } from 'preact-router/match';
+import { ROUTE, SIDEBAR_TYPE } from '../../constants';
 import './Sidebar.less';
-import {Dropdown} from '../../patterns';
+import { Dropdown } from '../../patterns';
 
 export default function Sidebar(props) {
 	const closeSidebar = () => {
 		props.sidebarRef.current.classList.remove('sidebarVisible');
 	};
-	//Very hardcoded as you asked -_-
 	return (<div ref={props.sidebarRef} className="sidebar">
 
 		{
@@ -26,7 +25,7 @@ export default function Sidebar(props) {
 							<p>Outlets</p></div>
 					</Link>
 
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.PROTOCOLS}>
+					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={'/protocols'}>
 						<div className="contextHolder">/*<img src={'/'}  />*/
 							<p>API Protocols</p></div>
 					</Link>
@@ -67,13 +66,13 @@ export default function Sidebar(props) {
 
 					<div className="navLink">
 						<div className="contextHolder">
-							<i className="far fa-user-circle fa-2x"/>
+							<i className="far fa-user-circle fa-2x" />
 							<p> UserName </p></div>
 					</div>
 
 					<div className="navLink">
 						<div className="contextHolder">
-							<i className="fas fa-sign-out-alt fa-2x"/>
+							<i className="fas fa-sign-out-alt fa-2x" />
 							<p> Sign Out</p>
 						</div>
 					</div>

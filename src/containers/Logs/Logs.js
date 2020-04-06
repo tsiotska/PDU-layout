@@ -19,8 +19,10 @@ export default class Logs extends Component {
 
 				<div className="column">
 					<div className="row labels">
-						<div>Time</div>
-						<div>Type</div>
+						<div>
+							<div>Time</div>
+							<div>Type</div>
+						</div>
 						<div>Message</div>
 					</div>
 
@@ -110,8 +112,8 @@ export default class Logs extends Component {
 							<div>NOTICE</div>
 						</div>
 						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+					</div>
 				</div>
-			</div>
 			</div>
 		);
 	}

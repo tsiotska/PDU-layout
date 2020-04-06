@@ -1,10 +1,9 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
 
-.button{
+
+.button{ //By default bg, width
   #fontStack5;
   color: @primary-color;
-
   min-width: 70px;
   height: 30px;
   background-color: @fourth-color;
@@ -23,25 +22,38 @@
 }
 
 .disabled{
+  #fontStack1;
   background-color: #f7f8f8;
   border: 1px solid #d0d5db;
-  #fontStack1;
+
   &:hover{
 	opacity: 1;
   }
 }
 
-.small{
+.button.dark{
+  border: 1px solid #d0d5db;
+  background-color: @fourth-color;
+  color: @primary-color;
+}
+
+.button.light{
+  #fontStack2;
+  border: 1px solid #d0d5db;
+  background-color: #f8faff;
+}
+
+.button.small{
   width: 120px;
   height: 40px;
 }
 
-.middle{
+.button.middle{
   width: 160px;
   height: 40px;
 }
 
-.long{
+.button.long{
   width: 280px;
   height: 40px;
 }

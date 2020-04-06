@@ -7,6 +7,10 @@
   height: 60px;
   background-color: @fifth-color;
 
+  .hamburger {
+	display: none;
+  }
+
   .logoContainer {
 	#flex-center;
 	height: 100%;
@@ -18,29 +22,26 @@
 	  width: 40px;
 	}
   }
-}
 
-.userMenu {
-  #flex-space-around;
-  #fontStack2;
-  padding-right: 20px;
-  min-width: 50%;
-}
+  .userMenu {
+	#flex-space-around;
+	#fontStack2;
+	padding-right: 20px;
+	min-width: 50%;
 
-.element {
-  #flex-center;
-  color: #ffffff;
+	.element {
+	  #flex-center;
+	  color: #ffffff;
 
-  .fas, .far {
-	padding-right: 10px;
+	  .fas, .far {
+		padding-right: 10px;
+	  }
+
+	  &:hover {
+		cursor: pointer;
+	  }
+	}
   }
-  &:hover{
-	cursor: pointer;
-  }
-}
-
-.hamburger {
-  display: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -48,21 +49,22 @@
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+	.userMenu {
+	  display: none;
+	}
 
-  .userMenu {
-	display: none;
-  }
+	.hamburger {
+	  display: flex;
+	  color: @third-color;
+	}
 
-  .hamburger {
-	display: flex;
-	color: @third-color;
-  }
+	.hamburger:first-child {
+	  padding-left: 20px;
+	}
 
-  .hamburger:first-child {
-	padding-left: 20px;
-  }
-
-  .hamburger:nth-child(2n) {
-	padding-right: 20px;
+	.hamburger:nth-child(2n) {
+	  padding-right: 20px;
+	}
   }
 }

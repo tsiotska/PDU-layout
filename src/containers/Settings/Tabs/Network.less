@@ -1,0 +1,80 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.NetworkWrapper {
+  padding: 20px 40px;
+
+  .column {
+	.column:first-child {
+	  width: 400px;
+
+	  .inputGroup {
+		.row {
+		  #flex-space-between;
+
+		  .label {
+			#fontStack2;
+		  }
+
+		  .value {
+			width: 280px;
+		  }
+		}
+	  }
+
+	  .switchGroup {
+		.row {
+		  #flex-start-centered;
+
+		  .label {
+			margin-left: 10px;
+		  }
+		}
+	  }
+
+	  > .row:last-child { //Button
+		margin-top: 20px;
+	  }
+	}
+
+	> .column:last-child {
+	  border-top: 2px solid @third-color;
+	  margin-top: 20px;
+	  padding-top: 20px;
+
+	  .row {
+		align-items: center;
+
+		.label {
+		  margin-left: 15px;
+		}
+	  }
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .NetworkWrapper {
+	#flex-column-start;
+
+
+	>.column {
+	  align-items: center;
+	  .column:first-child {
+		width: fit-content;
+
+		.inputGroup {
+		  .row {
+			flex-direction: column;
+			align-items: flex-start;
+		  }
+		}
+
+		> .row:last-child {
+		  .button {
+			width: 280px;
+		  }
+		}
+	  }
+	}
+  }
+}

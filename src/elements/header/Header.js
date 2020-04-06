@@ -6,6 +6,7 @@ import { Dropdown } from '../../patterns';
 const Header = (props) => (
 	<div className="header">
 		<i className="hamburger fas fa-bars fa-2x" ref={props.routesRef} onClick={() => props.toggleSidebar('routes')} />
+
 		<div className="logoContainer">
 			<img className="logo" src={logo} alt="logo" />
 		</div>
@@ -16,11 +17,8 @@ const Header = (props) => (
 					iconUrl="fas fa-globe-americas fa-2x"
 					name={'English'}
 					list={[
-						'English ',
-						'.....................................',
-						'Sorry',
-						'(^_^)',
-						'Works fine'
+						'English', 'Turkish', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian',
+						'Ukrainian', 'Ukrainian',	'Ukrainian',	'Ukrainian',	'Ukrainian',	'Ukrainian'
 					]}
 				/></div>
 

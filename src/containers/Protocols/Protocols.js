@@ -1,42 +1,41 @@
 import { Component } from 'preact';
 import './Protocols.less';
-import { SNMPv2, MQTT, REST } from '../index';
+import { SNMPv2, MQTT, REST } from './Tabs';
 import { Link } from 'preact-router/match';
-import { Route, Router } from 'preact-router';
 
 
 export default class Protocols extends Component {
-	render() {
+
+	subRoutes = {
+		SNMPv2: 'SNMPv2',
+		MQTT: 'MQTT',
+		REST: 'REST'
+	};
+
+	subComponents = {
+		SNMPv2: <SNMPv2 />,
+		MQTT: <MQTT />,
+		REST: <REST />
+	};
+
+	getComponent = (page) => page ? this.subComponents[page] : this.subComponents.SNMPv2;
+
+	render({ page }) {
+		//console.log(this.props.page);
+
 		return (
 			<div className="ProtocolsWrapper">
 				<div className="panel">
 					<div className="title">API Protocols</div>
 					<div className="nav">
-						<Link href={'/protocols/SNMPv2'} activeClassName="is-active" className="tab">SNMPv2</Link>
-						<Link href={'/MQTT'} activeClassName="is-active" className="tab">MQTT</Link>
-						<Link href={'/REST'} activeClassName="is-active" className="tab">REST</Link>
+						<Link href={`/protocols/${this.subRoutes.SNMPv2}`} activeClassName="is-active" className="tab">SNMPv2</Link>
+						<Link href={`/protocols/${this.subRoutes.MQTT}`} activeClassName="is-active" className="tab">MQTT</Link>
+						<Link href={`/protocols/${this.subRoutes.REST}`} activeClassName="is-active" className="tab">REST</Link>
 					</div>
 				</div>
 
-				<Router>
-					<Route path="/protocols/SNMPv2" component={SNMPv2} />
-				</Router>
+				{this.getComponent(page)}
 
 			</div>);
 	}
 }
-
-/*       <div>
-					<Route  path='/SNMPv2' default component={SNMPv2}/>
-					<Route path='/MQTT' component={MQTT}/>
-				<Route path='/REST' component={REST}/>
-			</div>
-
-			or
-
-			<Router>
-					<SNMPv2 path='/SNMPv2' default/>
-					<MQTT path='/MQTT'/>
-					<REST path='/REST'/>
-				</Router>
-			*/
