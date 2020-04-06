@@ -11,7 +11,7 @@ function Dropdown(props) {
 
 		<i className={props.iconUrl} />
 
-		<span>{props.name}</span>
+		<span className="name">{props.name}</span>
 
 		{isDropOpened &&
 		<div className="dropdown-content">

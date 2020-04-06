@@ -1,6 +1,6 @@
-import {Component} from 'preact';
-import {Button} from '../../patterns';
-import "./Logs.less";
+import { Component } from 'preact';
+import { Button } from '../../patterns';
+import './Logs.less';
 
 export default class Logs extends Component {
 	render() {
@@ -10,9 +10,9 @@ export default class Logs extends Component {
 				<div className="row">
 					<div className="title">Logs</div>
 					<div className="row btnGroup">
-						<Button value="Refresh"/>
-						<Button value="Export to file"/>
-						<Button value="Clear log" class="disabled"/>
+						<Button value="Refresh" />
+						<Button value="Export to file" />
+						<Button value="Clear log" class="disabled" />
 					</div>
 				</div>
 
@@ -23,6 +23,7 @@ export default class Logs extends Component {
 							<div>Time</div>
 							<div>Type</div>
 						</div>
+
 						<div>Message</div>
 					</div>
 

@@ -77,7 +77,7 @@ function Admin() {
 				</div>
 
 				<div className="row">
-					<div><Button class="small disabled" value="Save Changes"/></div>
+					<div><Button class="small disabled" value="Save Changes" /></div>
 				</div>
 
 			</div>

@@ -4,44 +4,47 @@ import './Sidebar.less';
 import { Dropdown } from '../../patterns';
 
 export default function Sidebar(props) {
-	const closeSidebar = () => {
-		props.sidebarRef.current.classList.remove('sidebarVisible');
-	};
+	const { toggleSidebar } = props;
 	return (<div ref={props.sidebarRef} className="sidebar">
 
 		{
 			props.render === SIDEBAR_TYPE.ROUTES
 				?
 				<nav className="navList">
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.OVERVIEW}>
+					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.OVERVIEW}>
 						<div className="contextHolder">
-							/*<img src={'/'}  />*/
-							<p>Overview</p>
+							{/*<img src={'/'}  />*/}
+							<p >Overview</p>
 						</div>
 					</Link>
 
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.OUTLETS}>
-						<div className="contextHolder">  /*<img src={'/'}  />*/
+					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.OUTLETS}>
+						<div className="contextHolder">
+							{/*<img src={'/'}  />*/}
 							<p>Outlets</p></div>
 					</Link>
 
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={'/protocols'}>
-						<div className="contextHolder">/*<img src={'/'}  />*/
+					<Link onClick={toggleSidebar}  name={SIDEBAR_TYPE.ROUTES}  activeClassName="is-active" className="navLink" href={ROUTE.PROTOCOLS}>
+						<div className="contextHolder">
+							{/*<img src={'/'}  />*/}
 							<p>API Protocols</p></div>
 					</Link>
 
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.LOGS}>
-						<div className="contextHolder">  /*<img src={'/'}  />*/
+					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.LOGS}>
+						<div className="contextHolder">
+							{/*<img src={'/'}  />*/}
 							<p>Logs</p></div>
 					</Link>
 
-					<Link onClick={() => closeSidebar()} activeClassName="is-active" className="navLink" href={ROUTE.USERS}>
-						<div className="contextHolder">  /*<img src={'/'}  />*/
+					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.USERS}>
+						<div className="contextHolder">
+							{/*<img src={'/'}  />*/}
 							<p>Users</p></div>
 					</Link>
 
-					<Link  onClick={() => closeSidebar()}activeClassName="is-active" className="navLink" href={ROUTE.SETTINGS}>
-						<div className="contextHolder">  /*<img src={'/'}  />*/
+					<Link  onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.SETTINGS}>
+						<div className="contextHolder">
+							{/*<img src={'/'}  />*/}
 							<p>Settings</p></div>
 					</Link>
 				</nav>

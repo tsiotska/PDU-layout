@@ -2,27 +2,19 @@
 @import '../../globalStyles/mixins/mixins';
 
 .LogsWrapper {
-  #flex-center;
-  flex-direction: column;
-  width: 100%;
   padding: 20px 40px;
 
-  .row {
-	display: flex;
-  }
-
-  > .row:first-child {
+  > .row {
 	justify-content: space-between;
 	width: 100%;
 
 	.btnGroup {
-	  #flex-space-around;
+	  #flex-space-between;
 	  width: 260px;
 	}
   }
 
   .column {
-	#flex-column-start;
 	width: 100%;
 	margin-top: 20px;
 
@@ -40,26 +32,26 @@
 		#flex-start;
 		width: 100%;
 	  }
-
-	  .div:not(:last-child) {
-
-	  }
 	}
   }
 }
 
 @media screen and (max-width: 767px) {
   .LogsWrapper {
+
+	> .row {
+	  flex-direction: column;
+	}
+
 	.column {
 	  .labels {
 		display: none
 	  }
-
 	  .row {
 		flex-wrap: wrap;
 		padding: 5px;
 
-		//aligning Type. Maybe give them class names
+		//aligning Type. Maybe give them class names.
 		div:first-child {
 		  div:nth-child(2) {
 			display: flex;

@@ -5,13 +5,14 @@ import { Dropdown } from '../../patterns';
 
 const Header = (props) => (
 	<div className="header">
-		<i className="hamburger fas fa-bars fa-2x" ref={props.routesRef} onClick={() => props.toggleSidebar('routes')} />
+		<i className="hamburger fas fa-bars fa-2x" ref={props.routesRef} name="routes" onClick={props.toggleSidebar} />
 
 		<div className="logoContainer">
 			<img className="logo" src={logo} alt="logo" />
 		</div>
 
 		<div className="userMenu">
+
 			<div className="element">
 				<Dropdown
 					iconUrl="fas fa-globe-americas fa-2x"
@@ -33,7 +34,7 @@ const Header = (props) => (
 			</div>
 		</div>
 
-		<i className="hamburger fas fa-ellipsis-v fa-2x" ref={props.userMenuRef} onClick={() => props.toggleSidebar('user_menu')} />
+		<i className="hamburger fas fa-ellipsis-v fa-2x" ref={props.userMenuRef} name="user_menu" onClick={props.toggleSidebar} />
 
 	</div>
 );
