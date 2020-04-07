@@ -27,6 +27,7 @@
 
 	  .column {
 		width: 200px;
+
 		.description {
 		  #fontStack6;
 		}
@@ -59,21 +60,34 @@
 
 @media screen and (max-width: 767px) {
   .OutletsWrapper {
-		  .container {
-			display: flex;
-			flex-direction: column;
+	.container {
+	  display: flex;
+	  flex-direction: column;
 
-			> .row:nth-child(1) {
-			  flex-direction: column;
-			}
+	  > .row:nth-child(1) {
+		flex-direction: column;
 
-			> .row:nth-child(2) {
-			  flex-direction: column;
-			  justify-content: space-around;
-			  height: 500px;
+		.column {
+		  align-items: flex-start;
+		}
+	  }
 
-			  .labels {
-				display: none;
+	  > .row:nth-child(2) {
+		flex-direction: column;
+		justify-content: space-around;
+		height: 700px;
+
+		.column {
+		  align-items: start;
+
+		  div {
+			#flex-start-centered;
+			height: 100%;
+		  }
+		}
+
+		.labels {
+		  display: none;
 		}
 
 		.row {
