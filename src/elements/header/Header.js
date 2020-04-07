@@ -1,7 +1,8 @@
 import './Header.less';
 import logo from '../../assets/logo.png';
 import { Dropdown } from '../../patterns';
-
+import { Link } from 'preact-router/match';
+import { ROUTE } from '../../constants';
 
 const Header = (props) => (
 	<div className="header">
@@ -28,10 +29,10 @@ const Header = (props) => (
 				<p> UserName </p>
 			</div>
 
-			<div className="element">
+			<Link className="element" href={ROUTE.LOGIN}>
 				<i className="fas fa-sign-out-alt fa-2x" />
 				<p> Sign Out</p>
-			</div>
+			</Link>
 		</div>
 
 		<i className="hamburger fas fa-ellipsis-v fa-2x" ref={props.userMenuRef} name="user_menu" onClick={props.toggleSidebar} />
