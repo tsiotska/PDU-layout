@@ -26,7 +26,6 @@ class Main extends Component {
 			sidebar = this.sidebarRef.current.classList,
 			type = event.currentTarget.attributes.getNamedItem('name').value;
 
-
 		if (currentSidebar !== type && sidebar.value.includes('sidebarVisible')) {
 			this.routesRef.current.classList.toggle('fa-times');
 			this.userMenuRef.current.classList.toggle('fa-times');

@@ -3,7 +3,7 @@
 
 .sidebar {
   position: relative;
-  width: 200px;
+  min-width: 200px;
   height: 100vh;
   background-color: @fourth-color;
 
@@ -24,14 +24,14 @@
 	  }
 
 	  .contextHolder {
-		display: flex;
+		#flex-start-centered;
+		width: 100%;
+		padding-left: 10px;
 
-		img, p, i {
-		  #flex-start-centered;
-		  padding-left: 15px;
+		 .label {
+		   margin-left: 10px;
 		}
 	  }
-
 	}
 
 	.is-active {
@@ -49,11 +49,11 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 
   .sidebar {
-	width: 50px;
+	min-width: 50px;
 
 	.navList {
 	  .navLink {
-		.contextHolder p {
+		.contextHolder .label {
 		  display: none;
 		}
 	  }

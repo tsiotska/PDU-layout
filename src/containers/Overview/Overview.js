@@ -1,6 +1,6 @@
-import {Component} from 'preact';
+import { Component } from 'preact';
 import './Overview.less';
-import {MockOutlets} from '../../constants';
+import { MockOutlets } from '../../constants';
 import SystemLayout from './SystemLayout/SystemLayout';
 
 //shouldn't i map it with mock??
@@ -42,7 +42,7 @@ export default class Overview extends Component {
 								<div className="row">
 									{outlet.Outputs.map((output, outputInx) => (
 										<div className="column">
-											<i className={'fas fa-charging-station fa-2x ' + output.State}/>
+											<img src="../../assets/output.svg" alt="output" className={'icon ' + output.State} />
 											<p>{'Output_' + outputInx}</p></div>
 									))}
 								</div>
@@ -75,7 +75,7 @@ export default class Overview extends Component {
 					))}
 				</div>
 
-				<SystemLayout/>
+				<SystemLayout />
 
 			</div>
 

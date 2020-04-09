@@ -13,39 +13,39 @@ export default function Sidebar(props) {
 				<nav className="navList">
 					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.OVERVIEW}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p >Overview</p>
+							<img className="icon" src="../../assets/dashboard-outlined.svg" alt="dashboard-outlined" />
+							<p className="label">Overview</p>
 						</div>
 					</Link>
 
 					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.OUTLETS}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p>Outlets</p></div>
+							<img className="icon" src="../../assets/outlets.svg" alt="outlets" />
+							<p className="label">Outlets</p></div>
 					</Link>
 
 					<Link onClick={toggleSidebar}  name={SIDEBAR_TYPE.ROUTES}  activeClassName="is-active" className="navLink" href={ROUTE.PROTOCOLS}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p>API Protocols</p></div>
+							<img className="icon" src="../../assets/api-outlined.svg" alt="api-outlined" />
+							<p className="label">API Protocols</p></div>
 					</Link>
 
 					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.LOGS}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p>Logs</p></div>
+							<img className="icon" src="../../assets/document-text-outline.svg" alt="document-text-outline" />
+							<p className="label">Logs</p></div>
 					</Link>
 
 					<Link onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.USERS}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p>Users</p></div>
+							<img className="icon" src="../../assets/user-outlined.svg" alt="user-outlined" />
+							<p className="label">Users</p></div>
 					</Link>
 
 					<Link  onClick={toggleSidebar} name={SIDEBAR_TYPE.ROUTES} activeClassName="is-active" className="navLink" href={ROUTE.SETTINGS}>
 						<div className="contextHolder">
-							{/*<img src={'/'}  />*/}
-							<p>Settings</p></div>
+							<img className="icon" src="../../assets/settings.svg" alt="settings" />
+							<p className="label">Settings</p></div>
 					</Link>
 				</nav>
 				: props.render === SIDEBAR_TYPE.USER_MENU
@@ -54,8 +54,8 @@ export default function Sidebar(props) {
 					<div className="navLink">
 						<div className="contextHolder">
 							<Dropdown
-								iconUrl="fas fa-globe-americas fa-2x"
-								name={'English'}
+								iconUrl="../../assets/earth-outline.svg"
+								name="English"
 								list={[
 									'English',
 									'Spanish',
@@ -66,27 +66,21 @@ export default function Sidebar(props) {
 							/></div>
 					</div>
 
-
 					<div className="navLink">
 						<div className="contextHolder">
-							<i className="far fa-user-circle fa-2x" />
-							<p> UserName </p></div>
+							<img className="icon" src="../../assets/user-outlined.svg" alt="user-outlined"  />
+							<p className="label"> UserName </p></div>
 					</div>
 
-					<div className="navLink">
+					<Link className="navLink" href={ROUTE.LOGIN}>
 						<div className="contextHolder">
-							<i className="fas fa-sign-out-alt fa-2x" />
-							<p> Sign Out</p>
+							<img className="icon" src="../../assets/bx-log-out-circle.svg" alt="user-outlined"  />
+							<p className="label"> Sign Out</p>
 						</div>
-					</div>
+					</Link>
 				</nav>
 		}
 
 	</div>);
 }
 
-/*	Object.entries(ROUTE).map((path) => (
-						<Link activeClassName="is-active" className="navLink" href={path[1].path}>
-							<img src={path[1].iconUrl} alt={'icon' + path[1].path} />
-<p>{path[0]}</p>
-</Link>*/

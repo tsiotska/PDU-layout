@@ -21,7 +21,7 @@ export default class Protocols extends Component {
 	getComponent = (page) => page ? this.subComponents[page] : this.subComponents.SNMPv2;
 
 	render({ page }) {
-		//console.log(this.props.page);
+		console.log(page);
 
 		return (
 			<div className="ProtocolsWrapper">
