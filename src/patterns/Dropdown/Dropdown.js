@@ -1,5 +1,5 @@
 import './dropdown.less';
-import { useState } from 'preact/hooks';
+import {useState} from 'preact/hooks';
 
 //Provide here CHECKED logic
 function Dropdown(props) {
@@ -8,12 +8,13 @@ function Dropdown(props) {
 
 	return (<div className="dropdown" onClick={() => toggle(!isDropOpened)}>
 
-		{props.iconUrl && <img className="icon" src={props.iconUrl} alt="dropdownIcon"/>}
+		{props.iconUrl && <div className="iconContainer">
+			<img className="icon" src={props.iconUrl} alt="dropdownIcon"/>
+		</div>}
 
 		<span className="label">{props.name}</span>
 
-		{isDropOpened &&
-		<div className="dropdown-content">
+		{isDropOpened && <div className="dropdown-content">
 
 			{props.list && props.list.map((item) => (
 				<div className="item">

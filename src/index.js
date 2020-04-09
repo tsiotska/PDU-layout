@@ -1,77 +1,111 @@
-import { Component, render, createRef } from 'preact';
-import { Provider } from 'preact-redux';
-import { Router } from 'preact-router';
+import {Component, render, createRef} from 'preact';
+import {Provider} from 'preact-redux';
+import {Router} from 'preact-router';
 import store from './store';
 
 import './globalStyles/index.less';
 
-import { ROUTE, SIDEBAR_TYPE } from './constants';
-import { Logs, Outlets, Overview, Protocols, Settings, Users, Auth } from './containers';
-import { Header, Sidebar } from './elements';
+import {ROUTE, SIDEBAR_TYPE} from './constants';
+import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth} from './containers';
+import {Header, Sidebar} from './elements';
+
+import ResizeObserver from 'preact-resize-observer';
 
 
 class Main extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { currentSidebar: SIDEBAR_TYPE.ROUTES };
-
+		this.state = {
+			currentSidebar: SIDEBAR_TYPE.ROUTES,
+			closeRoutes: false,
+			closeUserMenu: false,
+			isItMobile: window.innerWidth <= 767
+		};
 	}
 
-	routesRef = createRef();
-	userMenuRef = createRef();
 	sidebarRef = createRef();
 
+	/*This feature fixes simple adaptive issues,
+	it was in sidebar, but then i thought it could be helpful for you*/
+
+	handleResize = (width) => {
+		//If we go from mobile to pc.
+		if (width > 767 && this.state.isItMobile) {
+			this.setState({
+				isItMobile: !this.state.isItMobile,
+				currentSidebar: SIDEBAR_TYPE.ROUTES
+			})
+				//Then from pc to mobile
+		} else if (width <= 767 && !this.state.isItMobile) {
+			this.setState({
+				isItMobile: !this.state.isItMobile,
+				closeRoutes: false,
+				closeUserMenu: false,
+			});
+			//If sidebar was opened, let him be closed...
+			if (this.sidebarRef.current.classList.value.includes('sidebarVisible')) {
+				this.sidebarRef.current.classList.toggle('sidebarVisible');
+			}
+		}
+	};
+
 	toggleSidebar = (event) => {
-		const { currentSidebar } = this.state,
+		const {currentSidebar, closeRoutes, closeUserMenu} = this.state,
 			sidebar = this.sidebarRef.current.classList,
 			type = event.currentTarget.attributes.getNamedItem('name').value;
 
 		if (currentSidebar !== type && sidebar.value.includes('sidebarVisible')) {
-			this.routesRef.current.classList.toggle('fa-times');
-			this.userMenuRef.current.classList.toggle('fa-times');
-		}
-		else if (type === 'routes') {
-			this.routesRef.current.classList.toggle('fa-times');
+			this.setState({closeRoutes: !closeRoutes, closeUserMenu: !closeUserMenu});
+			//this.routesMenuRef.current.classList.toggle('fa-times');
+			//this.userMenuRef.current.classList.toggle('fa-times');
+		} else if (type === 'routes') {
+			this.setState({closeRoutes: !closeRoutes});
+			//this.routesMenuRef.current.classList.toggle('fa-times');
 			sidebar.toggle('sidebarVisible');
-		}
-		else {
-			this.userMenuRef.current.classList.toggle('fa-times');
+		} else {
+			this.setState({closeUserMenu: !closeUserMenu});
+			//this.userMenuRef.current.classList.toggle('fa-times');
 			sidebar.toggle('sidebarVisible');
 		}
 		if (currentSidebar !== type)
-			this.setState({ currentSidebar: type });
+			this.setState({currentSidebar: type});
 	};
 
 	//Please repair routers nesting
-	render(_, { currentSidebar }) {
+	render({}, {currentSidebar, closeRoutes, closeUserMenu, isItMobile}) {
 		return (
-			<div className="Wrapper">
+			<ResizeObserver class="fluid-content" onResize={this.handleResize}>
+				<div className="Wrapper">
 
-				<Header routesRef={this.routesRef} userMenuRef={this.userMenuRef} toggleSidebar={this.toggleSidebar} />
+					<Header isItMobile={isItMobile} closeRoutes={closeRoutes}
+									closeUserMenu={closeUserMenu} toggleSidebar={this.toggleSidebar}/>
 
-				<div className="Components">
-					<Sidebar sidebarRef={this.sidebarRef} toggleSidebar={this.toggleSidebar} render={currentSidebar} />
+					<div className="Components">
+						<Sidebar isItMobile={isItMobile} sidebarRef={this.sidebarRef} toggleSidebar={this.toggleSidebar}
+										 render={currentSidebar}/>
 
-					<div className="pageScroll">
+						<div className="pageScroll">
 
-						<div className="page">
-							<Provider store={store}>
-								<Router>
-									<Auth path={ROUTE.LOGIN} />
-									<Outlets path={ROUTE.OUTLETS} default />
-									<Overview path={ROUTE.OVERVIEW} />
-									<Protocols path={ROUTE.PROTOCOLS} />
-									<Settings path={ROUTE.SETTINGS} />
-									<Users path={ROUTE.USERS} />
-									<Logs path={ROUTE.LOGS} />
-								</Router>
-							</Provider>
+							<div className="page">
+								<Provider store={store}>
+									<Router>
+										<Auth path={ROUTE.LOGIN}/>
+										<Outlets path={ROUTE.OUTLETS} default/>
+										<Overview path={ROUTE.OVERVIEW}/>
+										<Protocols path={ROUTE.PROTOCOLS}/>
+										<Settings path={ROUTE.SETTINGS}/>
+										<Users path={ROUTE.USERS}/>
+										<Logs path={ROUTE.LOGS}/>
+									</Router>
+								</Provider>
+							</div>
+
 						</div>
-
 					</div>
 				</div>
-			</div>);
+			</ResizeObserver>
+		)
 	}
 }
 
-render(<Main />, document.body);
+render(<Main/>, document.body);

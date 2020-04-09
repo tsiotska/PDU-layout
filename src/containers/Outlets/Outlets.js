@@ -1,6 +1,7 @@
 import {Component} from 'preact';
 import './Outlets.less';
 import {RadioButton, Switch, TextBox} from '../../patterns';
+import Output from '../../assets/output.svg';
 
 export default class Outlets extends Component {
 
@@ -72,7 +73,7 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x On"/>
+									<Output className="On" alt="output"/>
 									<p>Output_1</p>
 								</div>
 								<div><Switch/></div>
@@ -81,8 +82,8 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x On"/>
-									<p>Output_1</p>
+									<Output className="On" alt="output"/>
+									<p>Output_2</p>
 								</div>
 								<div><Switch/></div>
 								<div><TextBox value={110}/></div>
@@ -90,51 +91,8 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x On"/>
-									<p>Output_1</p>
-								</div>
-								<div><Switch/></div>
-								<div><TextBox value={110}/></div>
-							</div>
-						</div>
-
-
-						<div className="row">
-
-							<div className="column labels">
-								<div className="label">
-									Outputs
-								</div>
-								<div className="label">
-									State
-								</div>
-								<div className="label">
-									Delay, s (0-255)
-								</div>
-							</div>
-
-							<div className="column">
-								<div className="column">
-									<i className="fas fa-charging-station fa-2x On"/>
-									<p>Output_1</p>
-								</div>
-								<div><Switch/></div>
-								<div><TextBox value={110}/></div>
-							</div>
-
-							<div className="column">
-								<div className="column">
-									<i className="fas fa-charging-station fa-2x Error"/>
-									<p>Output_1</p>
-								</div>
-								<div><Switch/></div>
-								<div><TextBox value={110}/></div>
-							</div>
-
-							<div className="column">
-								<div className="column">
-									<i className="fas fa-charging-station fa-2x Overload"/>
-									<p>Output_1</p>
+									<Output className="On" alt="output"/>
+									<p>Output_3</p>
 								</div>
 								<div><Switch/></div>
 								<div><TextBox value={110}/></div>
@@ -158,8 +116,8 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x Off"/>
-									<p>Output_1</p>
+									<Output className="On" alt="output"/>
+									<p>Output_4</p>
 								</div>
 								<div><Switch/></div>
 								<div><TextBox value={110}/></div>
@@ -167,8 +125,8 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x Off"/>
-									<p>Output_1</p>
+									<Output className="Error" alt="output"/>
+									<p>Output_5</p>
 								</div>
 								<div><Switch/></div>
 								<div><TextBox value={110}/></div>
@@ -176,8 +134,51 @@ export default class Outlets extends Component {
 
 							<div className="column">
 								<div className="column">
-									<i className="fas fa-charging-station fa-2x Off"/>
-									<p>Output_1</p>
+									<Output className="Overload" alt="output"/>
+									<p>Output_6</p>
+								</div>
+								<div><Switch/></div>
+								<div><TextBox value={110}/></div>
+							</div>
+						</div>
+
+
+						<div className="row">
+
+							<div className="column labels">
+								<div className="label">
+									Outputs
+								</div>
+								<div className="label">
+									State
+								</div>
+								<div className="label">
+									Delay, s (0-255)
+								</div>
+							</div>
+
+							<div className="column">
+								<div className="column">
+									<Output className="Off" alt="output"/>
+									<p>Output_7</p>
+								</div>
+								<div><Switch/></div>
+								<div><TextBox value={110}/></div>
+							</div>
+
+							<div className="column">
+								<div className="column">
+									<Output className="Off" alt="output"/>
+									<p>Output_8</p>
+								</div>
+								<div><Switch/></div>
+								<div><TextBox value={110}/></div>
+							</div>
+
+							<div className="column">
+								<div className="column">
+									<Output className="Off" alt="output"/>
+									<p>Output_9</p>
 								</div>
 								<div><Switch/></div>
 								<div><TextBox value={110}/></div>

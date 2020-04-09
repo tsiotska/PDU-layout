@@ -38,9 +38,15 @@
 	  align-items: unset;
 	  padding: 20px;
 
+
 	  .column {
-		#flex-column-space-around;
+		align-items: start;
 		height: 100%;
+
+		div {
+		  #flex-start-centered;
+		  height: 100%;
+		}
 	  }
 
 	  > .row {
@@ -75,15 +81,6 @@
 		flex-direction: column;
 		justify-content: space-around;
 		height: 700px;
-
-		.column {
-		  align-items: start;
-
-		  div {
-			#flex-start-centered;
-			height: 100%;
-		  }
-		}
 
 		.labels {
 		  display: none;
