@@ -18,7 +18,7 @@ export default class Protocols extends Component {
 		REST: <REST />
 	};
 
-	getComponent = (page) => page ? this.subComponents[page] : this.subComponents.SNMPv2;
+	getComponent = (page) => page && page!==':page' ? this.subComponents[page] : this.subComponents.SNMPv2;
 
 	render({ page }) {
 		console.log(page);

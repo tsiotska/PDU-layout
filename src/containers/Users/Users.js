@@ -11,10 +11,10 @@ export default class Users extends Component {
 	};
 
 	subComponents = {
-		Admin: <Admin/>
+		Admin: <Admin />
 	};
 
-	getComponent = (page) => page ? this.subComponents[page] : this.subComponents.Admin;
+	getComponent = (page) => page && page!==':page' ? this.subComponents[page] : this.subComponents.Admin;
 
 	render({page}) {
 		console.log(page);

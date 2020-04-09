@@ -1,7 +1,7 @@
-import {Component} from 'preact';
+import { Component } from 'preact';
 import './Settings.less';
-import {Link} from 'preact-router/match';
-import {Network, Date, Firmware} from './Tabs/';
+import { Link } from 'preact-router/match';
+import { Network, Date, Firmware } from './Tabs/';
 
 
 export default class Settings extends Component {
@@ -13,14 +13,14 @@ export default class Settings extends Component {
 	};
 
 	subComponents = {
-		Network: <Network/>,
-		Date: <Date/>,
-		Firmware: <Firmware/>
+		Network: <Network />,
+		Date: <Date />,
+		Firmware: <Firmware />
 	};
 
-	getComponent = (page) => page ? this.subComponents[page] : this.subComponents.SNMPv2;
+	getComponent = (page) => page && page!==':page' ? this.subComponents[page] : this.subComponents.Network;
 
-	render({page}) {
+	render({ page }) {
 
 		return (
 			<div className="SettingsWrapper">
