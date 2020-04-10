@@ -1,5 +1,3 @@
-import './Auth.less';
-import logo from '../../assets/logo.png';
 import { Input, Button } from '../../patterns';
 
 export default function Auth(props) {
@@ -8,7 +6,7 @@ export default function Auth(props) {
 
 			<div className="column">
 				<div className="logoContainer">
-					<img src={logo} className="logo" />
+					<img src="../../assets/logo.png" className="logo" />
 				</div>
 
 				<div className="fields">

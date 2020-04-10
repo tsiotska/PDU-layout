@@ -1,5 +1,4 @@
 import { Component } from 'preact';
-import './Protocols.less';
 import { SNMPv2, MQTT, REST } from './Tabs';
 import { Link } from 'preact-router/match';
 

@@ -1,4 +1,3 @@
-import './Date.less';
 import { Button, Input, Select } from '../../../patterns';
 
 function Date() {

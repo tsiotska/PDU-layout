@@ -4,8 +4,6 @@ import {MockOutlets} from '../../constants';
 import SystemLayout from './SystemLayout/SystemLayout';
 import Output from '../../assets/output.svg';
 
-//shouldn't i map it with mock??
-
 export default class Overview extends Component {
 	render() {
 		return (

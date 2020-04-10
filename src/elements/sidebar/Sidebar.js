@@ -1,4 +1,3 @@
-import './Sidebar.less';
 import {Link} from 'preact-router/match';
 import {ROUTE, SIDEBAR_TYPE} from '../../constants';
 import {Dropdown} from '../../patterns';

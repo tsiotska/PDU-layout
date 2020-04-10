@@ -1,5 +1,4 @@
 import {Component} from 'preact';
-import './Outlets.less';
 import {RadioButton, Switch, TextBox} from '../../patterns';
 import Output from '../../assets/output.svg';
 

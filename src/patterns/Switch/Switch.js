@@ -1,4 +1,3 @@
-import './Switch.less';
 
 const Switch = (props) => (
 	<label className="switch">

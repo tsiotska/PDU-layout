@@ -56,22 +56,18 @@ class Main extends Component {
 
 		if (currentSidebar !== type && sidebar.value.includes('sidebarVisible')) {
 			this.setState({closeRoutes: !closeRoutes, closeUserMenu: !closeUserMenu});
-			//this.routesMenuRef.current.classList.toggle('fa-times');
-			//this.userMenuRef.current.classList.toggle('fa-times');
 		} else if (type === 'routes') {
 			this.setState({closeRoutes: !closeRoutes});
-			//this.routesMenuRef.current.classList.toggle('fa-times');
 			sidebar.toggle('sidebarVisible');
 		} else {
 			this.setState({closeUserMenu: !closeUserMenu});
-			//this.userMenuRef.current.classList.toggle('fa-times');
 			sidebar.toggle('sidebarVisible');
 		}
 		if (currentSidebar !== type)
 			this.setState({currentSidebar: type});
 	};
 
-	//Please repair routers nesting
+	//Auth router must be outside of header and sidebar! Rrr
 	render({}, {currentSidebar, closeRoutes, closeUserMenu, isItMobile}) {
 		return (
 			<ResizeObserver class="fluid-content" onResize={this.handleResize}>

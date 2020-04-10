@@ -1,4 +1,3 @@
-import './RadioButton.less';
 
 const RadioButton = (props) => (
 	<div className="radioGroup">

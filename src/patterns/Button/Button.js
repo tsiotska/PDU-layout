@@ -1,4 +1,3 @@
-import './Button.less';
 
 //You can provide here callback if it requires
 const Button = (props) => (

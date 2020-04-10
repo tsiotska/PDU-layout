@@ -1,5 +1,4 @@
 import { Switch, Input, Button } from '../../../patterns';
-import './Network.less';
 
 function NetworkConfig() {
 	return (

@@ -1,5 +1,4 @@
 import {Component} from 'preact';
-import './Users.less';
 import {Link} from 'preact-router/match';
 import {Button} from '../../patterns';
 import Admin from './Admin';

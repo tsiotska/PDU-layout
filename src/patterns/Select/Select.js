@@ -1,4 +1,3 @@
-import './Select.less';
 
 const Select = (props) => (
 	<select className={'select ' + props.class}  placeholder={props.placeholder}>

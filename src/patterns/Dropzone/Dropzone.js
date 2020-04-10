@@ -1,4 +1,3 @@
-import './Dropzone.less';
 
 const Dropzone = (props) => (
 	<div className="Dropzone">

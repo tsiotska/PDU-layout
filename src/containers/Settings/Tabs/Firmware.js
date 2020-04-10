@@ -1,4 +1,3 @@
-import './Firmware.less';
 import { Dropzone, Button } from '../../../patterns';
 
 function Firmware() {

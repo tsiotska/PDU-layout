@@ -9,9 +9,9 @@
  </g>
  <g>
   <title>Layer 1</title>
-  <rect stroke="#545454" rx="2" id="svg_1" height="14" width="20" y="1" x="1" stroke-width="2" fill="none"/>
-  <rect id="svg_5" height="2" width="4" y="9.650672" x="4.566757" stroke-width="0" stroke="#000" fill="#545454"/>
-  <rect id="svg_4" height="2" width="4" y="4.265983" x="9.017921" stroke-width="0" stroke="#000" fill="#545454"/>
-  <rect transform="rotate(-180 15.559762954711914,10.650671958923338) " id="svg_2" height="2" width="4" y="9.650672" x="13.559763" stroke-width="0" stroke="#000" fill="#545454"/>
+  <rect stroke="#bfc4c6" rx="2" id="svg_1" height="14" width="20" y="1" x="1" stroke-width="2" fill="none"/>
+  <rect id="svg_5" height="2" width="4" y="9.650672" x="4.566757" stroke-width="0" stroke="#000" fill="#bfc4c6"/>
+  <rect id="svg_4" height="2" width="4" y="4.265983" x="9.017921" stroke-width="0" stroke="#000" fill="#bfc4c6"/>
+  <rect transform="rotate(-180 15.559762954711914,10.650671958923338) " id="svg_2" height="2" width="4" y="9.650672" x="13.559763" stroke-width="0" stroke="#000" fill="#bfc4c6"/>
  </g>
 </svg>

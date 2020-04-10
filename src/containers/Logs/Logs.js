@@ -1,6 +1,5 @@
 import { Component } from 'preact';
 import { Button } from '../../patterns';
-import './Logs.less';
 
 export default class Logs extends Component {
 	render() {

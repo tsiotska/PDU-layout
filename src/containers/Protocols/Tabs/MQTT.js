@@ -1,4 +1,3 @@
-import './MQTT.less';
 import { Button, Input, Switch, Select, Checkbox } from '../../../patterns';
 
 const MQTT = () => (

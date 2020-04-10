@@ -1,4 +1,4 @@
-//import './Rest.less';
+
 
 const Rest = () => (
 	<div className="FormWrapper">

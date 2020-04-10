@@ -1,4 +1,3 @@
-import './Header.less';
 import {Dropdown} from '../../patterns';
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../constants';

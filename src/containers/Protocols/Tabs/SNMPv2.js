@@ -1,4 +1,3 @@
-import './SNMP.less';
 import { Switch, Input, Button } from '../../../patterns';
 
 const SNMPv2 = () => (

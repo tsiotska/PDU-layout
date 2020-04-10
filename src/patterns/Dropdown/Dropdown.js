@@ -1,4 +1,3 @@
-import './dropdown.less';
 import {useState} from 'preact/hooks';
 
 //Provide here CHECKED logic

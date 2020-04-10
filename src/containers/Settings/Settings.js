@@ -1,5 +1,4 @@
 import { Component } from 'preact';
-import './Settings.less';
 import { Link } from 'preact-router/match';
 import { Network, Date, Firmware } from './Tabs/';
 
