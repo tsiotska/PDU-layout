@@ -6,15 +6,6 @@
 	align-items: flex-start;
 	width: 400px;
 
-	//Switches
-	> .row {
-	  #flex-start-centered;
-
-	  .label {
-		margin-left: 15px;
-	  }
-	}
-
 	//inputs
 	.inputGroup {
 	  width: 100%;
@@ -32,8 +23,23 @@
 	  }
 	}
 
-	> .row:last-child {
-	  margin-top: 20px;
+	.checkboxGroup { //Simulate checkboxes nesting
+	  .row:nth-child(2) {
+		margin-left: @margin-block;
+	  }
+	}
+
+	//and others (alone switches and checkboxes)
+	.row {
+	  #flex-start-centered;
+
+	  .label {
+		margin-left: @margin-label;
+	  }
+	}
+
+	.buttonContainer .button { //> .row:last-child
+	  margin-top: @margin-block;
 	}
   }
 }
@@ -42,12 +48,19 @@
   .mqttWrapper {
 	#flex-start-centered;
 	flex-direction: column;
-	height: 100%;
 	width: 100%;
 
 	.column {
 	  height: 100%;
 	  width: fit-content;
+
+	  .checkboxGroup {
+		margin-top: @margin-block;
+	  }
+
+	  >.row {
+		margin-top: @margin-block;
+	  }
 
 	  .inputGroup {
 		.row {
@@ -62,8 +75,8 @@
 		}
 	  }
 
-	  > .row:last-child .button {
-		width: 280px;
+	  .buttonContainer .button { // > .row:last-child .button
+		width: 100%;
 	  }
 	}
   }

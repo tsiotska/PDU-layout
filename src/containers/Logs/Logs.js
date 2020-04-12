@@ -27,208 +27,130 @@ export default class Logs extends Component {
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
+
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
+
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
+
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
+
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
+
 					<div className="row">
 						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
+							<div className="value">2020-03-09 13:18:45</div>
+							<div className="value">NOTICE</div>
 						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div><div className="row">
-					<div className="fieldMerger">
-						<div>2020-03-09 13:18:45</div>
-						<div>NOTICE</div>
-					</div>
-					<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-				</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
-					</div>
-					<div className="row">
-						<div className="fieldMerger">
-							<div>2020-03-09 13:18:45</div>
-							<div>NOTICE</div>
-						</div>
-						<div>Session for user 'demo' has been terminated (reason: timeout).</div>
+						<div className="value message">Session for user 'demo' has been terminated (reason: timeout).</div>
 					</div>
 				</div>
 			</div>

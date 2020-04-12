@@ -1,4 +1,4 @@
-import { Switch, Input, Button } from '../../../patterns';
+import { RadioButton, Input, Button } from '../../../patterns';
 
 function NetworkConfig() {
 	return (
@@ -8,7 +8,9 @@ function NetworkConfig() {
 			</div>
 
 			<div className="column">
-				<div className="column">
+
+				<div className="column container">
+
 					<div className="inputGroup">
 						<div className="row">
 							<p className="label">MAC address</p>
@@ -23,15 +25,13 @@ function NetworkConfig() {
 						</div>
 					</div>
 
-					<div className="switchGroup">
+					<div className="column radioGroup">
 						<div className="row">
-							<div><Switch /></div>
-							<p className="label">Use DHCP</p>
+							<p><RadioButton label="Use DHCP" name="adresses"/></p>
 						</div>
 
 						<div className="row">
-							<div><Switch /></div>
-							<p className="label">Set static IP address</p>
+							<p><RadioButton label="Set static IP address" name="adresses"/></p>
 						</div>
 					</div>
 
@@ -56,21 +56,22 @@ function NetworkConfig() {
 						</div>
 					</div>
 
-					<div className="row">
+					<div className="row buttonContainer">
 						<div><Button class="small light" value="Save Changes" /></div>
 					</div>
 				</div>
 
-				<div className="column">
+				<div className="column footer">
 					<div className="row">
 						<div><Button class="light" value="locale" /></div>
 						<div className="label">Blink with status LEDs for 1 minute.</div>
 					</div>
 					<div className="row">
-						<p>Warning: Changes to network settings may result in PowerPDU 4C becoming unavailable at the current
+						<p><b>Warning</b>: Changes to network settings may result in PowerPDU 4C becoming unavailable at the current
 							address. See the PowerPDU 4C User Manual for ways to find the PowerPDU 4C at its new address.</p>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	);

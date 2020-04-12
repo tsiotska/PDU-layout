@@ -29,7 +29,7 @@ const SNMPv2 = () => (
 				<div><Input class="formInput" value="Private" /></div>
 			</div>
 
-			<div className="row">
+			<div className="row buttonContainer">
 				<Button class="small disabled" type="button" value="Save Changes" />
 			</div>
 		</div>

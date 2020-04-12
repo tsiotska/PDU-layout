@@ -1,7 +1,7 @@
 
 
 const Checkbox = (props) => (
-	<input type="checkbox" />
+	<input className="checkbox" type="checkbox" />
 );
 
 export default Checkbox;

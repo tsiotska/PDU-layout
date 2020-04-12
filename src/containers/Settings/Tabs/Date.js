@@ -26,7 +26,7 @@ function Date() {
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row buttonContainer">
 					<Button class="light small" value="Save Changes" />
 				</div>
 			</div>

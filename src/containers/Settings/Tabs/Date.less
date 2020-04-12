@@ -1,7 +1,6 @@
 @import '../../../globalStyles/mixins/mixins';
 
 .DateWrapper {
-  padding: 20px 40px;
 
   .column {
 	width: 400px;
@@ -16,8 +15,8 @@
 	  }
 	}
 
-	> .row:last-child {
-	  margin-top: 20px;
+	.buttonContainer { // > .row:last-child
+	  margin-top: @margin-block;
 	}
   }
 }
@@ -26,7 +25,6 @@
   .DateWrapper {
 	#flex-column-start;
 	align-items: center;
-
 	height: 100%;
 
 	.column {
@@ -40,7 +38,7 @@
 		}
 	  }
 
-	  > .row:last-child {
+	  .buttonContainer { //> .row:last-child
 		margin-top: auto;
 
 		.button {
@@ -49,5 +47,4 @@
 	  }
 	}
   }
-
 }

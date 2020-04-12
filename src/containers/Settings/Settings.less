@@ -7,6 +7,10 @@
   #flex-start;
   width: 100%;
   height: 100%;
+
+  .NetworkWrapper, .DateWrapper, .FirmwareWrapper {
+	padding: @padding-desktop;
+  }
 }
 
 
@@ -15,12 +19,12 @@
 	flex-direction: column;
 	align-items: center;
 
-	.title {
-	  display: none;
-	}
-
 	.NetworkWrapper, .DateWrapper, .FirmwareWrapper {
-	  padding: 3vh 3vw;
+	  padding: @padding-mobile;
+
+	  .title {
+		display: none;
+	  }
 	}
   }
 }

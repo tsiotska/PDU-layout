@@ -1,10 +1,9 @@
 @import '../../../globalStyles/mixins/mixins';
 
 .NetworkWrapper {
-  padding: 20px 40px;
 
   .column {
-	.column:first-child {
+	.container { // .column:first-child
 	  width: 400px;
 
 	  .inputGroup {
@@ -21,31 +20,28 @@
 		}
 	  }
 
-	  .switchGroup {
+	  .radioGroup {
 		.row {
 		  #flex-start-centered;
-
-		  .label {
-			margin-left: 10px;
-		  }
+		  width: 100%;
 		}
 	  }
 
-	  > .row:last-child { //Button
-		margin-top: 20px;
+	  .buttonContainer  { // > .row:last-child
+		margin-top: @margin-block;
 	  }
 	}
 
-	> .column:last-child {
+	 .footer {
 	  border-top: 2px solid @third-color;
-	  margin-top: 20px;
+	  margin-top: @margin-block;
 	  padding-top: 20px;
 
 	  .row {
 		align-items: center;
 
 		.label {
-		  margin-left: 15px;
+		  margin-left: @margin-label;
 		}
 	  }
 	}
@@ -56,10 +52,9 @@
   .NetworkWrapper {
 	#flex-column-start;
 
-
 	>.column {
 	  align-items: center;
-	  .column:first-child {
+	  .container {
 		width: fit-content;
 
 		.inputGroup {
@@ -69,7 +64,7 @@
 		  }
 		}
 
-		> .row:last-child {
+		.buttonContainer { // > .row:last-child
 		  .button {
 			width: 280px;
 		  }

@@ -2,7 +2,6 @@
 
 .FirmwareWrapper {
   width: 400px;
-  padding: 20px 40px;
 
   > .column {
 	> .row {
@@ -17,8 +16,8 @@
 		width: 100%
 	  }
 
-	  &:last-child {
-		margin-top: 20px;
+	  .buttonContainer { //&:last-child
+		margin-top: @margin-block;
 	  }
 	}
   }
@@ -28,7 +27,6 @@
   .FirmwareWrapper {
 	#flex-column-start;
 	align-items: center;
-
 	width: 100%;
 	height: 100%;
 
@@ -38,12 +36,16 @@
 	  > .row {
 		flex-direction: column;
 
-		&:last-child {
-		  margin-top: auto;
+		.Dropzone{
+		  width: 100%;
+		}
+	  }
 
-		  .button {
-			width: 280px;
-		  }
+	  .buttonContainer { //&:last-child
+		margin-top: auto;
+
+		.button {
+		  width: 280px;
 		}
 	  }
 	}

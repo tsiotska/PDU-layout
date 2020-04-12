@@ -17,14 +17,14 @@ function Firmware() {
 
 				<div className="row">
 					<div className="label">
-						<p>Firmware version</p>
+						<p>Firmware package</p>
 					</div>
-					<div className="value">
+					<div className="value Dropzone">
 						<Dropzone />
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row buttonContainer">
 					<Button class="light small" value="Install Firmware" />
 				</div>
 

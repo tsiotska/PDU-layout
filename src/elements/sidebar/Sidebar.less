@@ -1,5 +1,7 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
+
+@link-color: #bfc4c6;
+@active-link-color: #555555;
 
 .sidebar {
   position: relative;
@@ -44,45 +46,11 @@
 		  margin-left: 10px;
 		}
 	  }
-
-	  &:nth-child(1) .contextContainer .iconContainer .icon {
-		//width: 40px;
-	  }
-
-	  &:nth-child(2) .contextContainer .iconContainer .icon{
-		.icon {
-
-		}
-	  }
-
-	  &:nth-child(3) .contextContainer .iconContainer .icon{
-		.icon {
-
-		}
-	  }
-
-	  &:nth-child(4) .contextContainer .iconContainer .icon{
-		.icon {
-
-		}
-	  }
-
-	  &:nth-child(5) .contextContainer .iconContainer .icon{
-		.icon {
-
-		}
-	  }
-
-	  &:nth-child(6) .contextContainer .iconContainer .icon{
-		.icon {
-
-		}
-	  }
 	}
 
 	.is-active {
 	  background-color: @primary-color;
-	  color: @link-color;
+	  color: @active-link-color;
 	}
   }
 }

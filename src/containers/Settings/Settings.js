@@ -24,7 +24,8 @@ export default class Settings extends Component {
 		return (
 			<div className="SettingsWrapper">
 				<div className="panel">
-					<div className="title">API Protocols</div>
+					<div className="title">Settings</div>
+
 					<div className="nav">
 
 						<Link href={`/settings/${this.subRoutes.Network}`} activeClassName="is-active" className="tab">

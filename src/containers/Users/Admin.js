@@ -7,7 +7,7 @@ function Admin() {
 				User Settings
 			</div>
 
-			<div className="column">
+			<div className="column container">
 
 				<div className="inputGroup">
 					<div className="row">
@@ -76,7 +76,7 @@ function Admin() {
 					</div>
 				</div>
 
-				<div className="row">
+				<div className="row buttonContainer">
 					<div><Button class="small disabled" value="Save Changes" /></div>
 				</div>
 
