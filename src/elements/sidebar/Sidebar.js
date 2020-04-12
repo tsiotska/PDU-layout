@@ -12,7 +12,6 @@ export default function Sidebar(props) {
 					<div className="contextContainer">
 						<Dropdown
 							iconUrl="../../assets/earth-outline.svg"
-							name="English"
 							list={[
 								'English',
 								'Spanish',

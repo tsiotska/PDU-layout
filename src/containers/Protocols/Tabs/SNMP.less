@@ -3,78 +3,73 @@
 .snmpWrapper {
   width: 100%;
 
-	> .row {
+  > .row {
+	justify-content: space-between;
+  }
+
+  > .column {
+	align-items: flex-start;
+	width: 300px;
+
+	.row:nth-child(2n) {
+	  align-items: center;
 	  justify-content: space-between;
+	  width: 100%;
+
+	  .label {
+		#fontStack2;
+	  }
 	}
 
-	> .column {
-	  align-items: flex-start;
-	  width: 300px;
+	.row:nth-child(2n-1) {
+	  align-items: center;
 
-	  .row:nth-child(2n) {
-		align-items: center;
-		justify-content: space-between;
-		width: 100%;
-
-		.label {
-		  #fontStack2;
-		}
+	  .label {
+		margin-left: 15px;
 	  }
+	}
 
-	  .row:nth-child(2n-1) {
-		align-items: center;
-
-		.label {
-		  margin-left: 15px;
-		}
-	  }
-
-	  .row:last-child {
-		margin-top: 20px;
-	  }
+	.row:last-child {
+	  margin-top: 20px;
 	}
   }
+}
 
 @media screen and (max-width: 767px) {
 
-	.snmpWrapper {
-	  #flex-start-centered;
-	  flex-direction: column;
+  .snmpWrapper {
+	#flex-start-centered;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+
+	> .row .button {
+	  width: 280px;
+	  margin-top: 10px;
+	}
+
+	> .column {
 	  height: 100%;
-	  width: 100%;
+	  width: fit-content;
 
+	  .row:nth-child(2n) {
+		flex-direction: column;
+		align-items: flex-start;
 
-	 > .row {
-		  flex-direction: column;
-
-		  .button {
-			width: 280px;
-			margin-top: 10px;
-		  }
-		}
-
-		> .column {
-		  height: 100%;
-		  width: fit-content;
-
-		  .row:nth-child(2n) {
-			flex-direction: column;
-			align-items: flex-start;
-
-			.formInput {
-			  width: 280px;
-			}
-		  }
-
-		  .row:nth-child(2n - 1) {
-			margin-top: 30px;
-		  }
-
-		  .row:last-child .button {
-			width: 280px;
-			margin-top: auto;
-		  }
+		.formInput {
+		  width: 280px;
 		}
 	  }
+
+	  .row:nth-child(2n - 1) {
+		margin-top: 30px;
+	  }
+
+	  .row:last-child .button {
+		width: 280px;
+		margin-top: auto;
+	  }
 	}
+  }
+}
 

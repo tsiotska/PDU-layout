@@ -3,13 +3,24 @@
 
 .systemDescription {
   width: 100%;
-  .container {
-	#flex-space-around;
-	align-items: flex-start;
 
+  .container {
+	#flex-start;
 	flex-wrap: wrap;
-	> .column {
-	  margin: 20px;
+
+	> .row {
+	  justify-content: flex-start;
+	  flex-wrap: wrap;
+	  margin-top: 20px;
+
+	  > .column {
+		width: 250px;
+		//margin: 20px;
+
+		.Software { // > .column       Its unicum.
+		  margin-top: 35px;
+		}
+	  }
 	}
   }
 
@@ -40,10 +51,24 @@
   }
 }
 
-
 @media screen and (max-width: 767px) {
-  .systemDescription .container {
-	flex-direction: column;
-	justify-content: space-around;
+  .systemDescription {
+	padding: 3vh 3vw;
+	margin-top: 10px;
+
+	.container {
+	  flex-direction: column;
+	  justify-content: space-around;
+
+	  .row {
+		.column {
+		  margin-top: 10px;
+
+		  .Software { // > .column
+			margin-top: 10px;
+		  }
+		}
+	  }
+	}
   }
 }

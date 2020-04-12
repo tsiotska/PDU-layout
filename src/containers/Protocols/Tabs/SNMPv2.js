@@ -3,7 +3,6 @@ import { Switch, Input, Button } from '../../../patterns';
 const SNMPv2 = () => (
 	<div className="snmpWrapper">
 
-
 		<div className="row">
 			<div className="title">SNMPv2</div>
 			<Button class="light" value="Download MIB file" />

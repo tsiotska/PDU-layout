@@ -27,7 +27,7 @@ export default class Users extends Component {
 						<Link href={`/users/${this.subRoutes.Admin}`} activeClassName="is-active" className="tab">Admin</Link>
 						<Link activeClassName="is-active" className="tab">
 							Guest
-							<i className="fas fa-times crossIcon"/>
+							<img src="../../assets/round-close.svg" className="crossIcon" alt="close" />
 						</Link>
 						<div className="tabBtn"><Button class="middle disabled" value="Create user"/></div>
 					</div>

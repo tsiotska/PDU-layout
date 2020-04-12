@@ -5,8 +5,9 @@ import {ROUTE} from '../../constants';
 const Header = (props) => (
 	<div className="header">
 
-		<div className="hamburger iconContainer" name="routes" onClick={props.toggleSidebar}>
-			<img src={props.closeRoutes ?"../../assets/round-close.svg"  : "../../assets/round-menu.svg" }
+		<div className={"hamburger iconContainer " + (props.closeRoutes ? "cross" : "")} name="routes"
+				 onClick={props.toggleSidebar}>
+			<img src={props.closeRoutes ? "../../assets/round-close.svg" : "../../assets/round-menu.svg"}
 					 className="icon" alt="hamburger"/>
 		</div>
 
@@ -19,7 +20,6 @@ const Header = (props) => (
 			<div className="element">
 				<Dropdown
 					iconUrl="../../assets/earth-outline.svg"
-					name="English"
 					list={[
 						'English', 'Turkish', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian',
 						'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian'
@@ -41,8 +41,8 @@ const Header = (props) => (
 			</Link>
 		</div>
 
-		<div className="hamburger iconContainer" name="user_menu" onClick={props.toggleSidebar}>
-			<img src={props.closeUserMenu ?"../../assets/round-close.svg" : "../../assets/more-vertical.svg"}
+		<div className={"hamburger iconContainer " + (props.closeUserMenu ? "cross" : "")} name="user_menu" onClick={props.toggleSidebar}>
+			<img src={props.closeUserMenu ? "../../assets/round-close.svg" : "../../assets/more-vertical.svg"}
 					 className="icon" alt="hamburger"/>
 		</div>
 	</div>

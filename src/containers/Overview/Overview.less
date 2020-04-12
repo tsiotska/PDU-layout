@@ -4,10 +4,10 @@
 .OverviewWrapper {
   #flex-column-start;
   width: 100%;
-  padding: 20px;
+  padding: 20px 40px;
 
   .table {
-	#flex-center;
+	#flex-start-centered;
 	width: 100%;
 	padding: 20px;
 
@@ -16,38 +16,47 @@
 	  width: 100%;
 	}
 
-	//And here starts our tree
-	> .column {
-	  width: 260px; //definitely
+	//Here starts our awkward tree...
+	> .column { //Three column at all
+	  width: 260px; //definitely width, maybe make it more flexible
 	  height: 100%;
 
-	  > .row {
+	  > .row { //We have three rows inside every column
 		margin-top: 15px;
 
-		&:first-child {
+		.label { //for all labels
+		  #fontStack6;
+		}
+
+		> .label { //labels at first two row, scroll down to see labels at columns
+		  display: flex;
+		  align-items: center;
+		  min-width: 100px;
+		  padding: 8px;
+		}
+
+		&:first-child { //Defining properties for each of three rows
 		  justify-content: flex-start;
 
 		  > .row {
-			width: 100%;
-			align-items: flex-end;
 			border-bottom: 2px solid #E3BE3F;
-			margin-right: 30px;              //cut border line
+			margin-right: 30px; //cut border line
 
 			> .row {
-			  justify-content: space-around;
-			  width: 75%;
-			}
+			  justify-content: flex-start;
+			  width: 100%;
 
-			/*.column {
-              .label {
-                width: 60px;
-              }*/
+			  .column {
+				margin-left: 20px;
+			  }
+			}
 		  }
 
 		  .Box {
 			#flex-center;
-			width: 27px;
+			min-width: 27px;
 			height: 37px;
+			color: @primary-color;
 			background-color: #E3BE3F;
 		  }
 		}
@@ -64,24 +73,12 @@
 		  }
 		}
 
-		.label {
-		  #fontStack1;
-		}
-
-		//giving fixed width for all labels
-		> .label {
-		  display: flex;
-		  align-items: center;
-		  min-width: 100px;
-		  padding-left: 5px;
-		}
-
 		&:nth-child(3) {
-		  .column .label {
+		  .column .label { //labels at column
 			min-width: 100px;
 			padding: 8px;
 
-			&:nth-child(2n) {
+			&:nth-child(2n - 1) {
 			  background-color: #ebf1f4;
 			}
 		  }
@@ -89,11 +86,11 @@
 		  .row .column {
 			width: 100%; //Connect columns in one line
 
-			.value {
-			  #fontStack6;
+			.value { //Dont use here fontStack6, because it overrides color state
+			  font-size: 12px;
 			  padding: 8px;
 
-			  &:nth-child(2n) {
+			  &:nth-child(2n-1) {
 				background-color: #ebf1f4;
 			  }
 			}
@@ -101,7 +98,7 @@
 		}
 	  }
 
-	  &:nth-child(1) {
+	  &:first-child {
 		width: 360px; //Add 100px to first column to compensate label width
 	  }
 
@@ -134,8 +131,11 @@
 
 @media screen and (max-width: 767px) {
   .OverviewWrapper {
+	padding: 3vh 3vw;
+
 	.table {
 	  flex-direction: column;
+	  padding: 0;
 
 	  > .column {
 		margin-top: 15px;
@@ -158,7 +158,6 @@
 			&:nth-child(3) .column .label {
 			  display: flex;
 			}
-
 		  }
 		}
 	  }
