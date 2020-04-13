@@ -5,32 +5,45 @@
 
   > .row {
 	justify-content: space-between;
+
   }
 
-  > .column {
+  .container {
 	align-items: flex-start;
 	width: 300px;
 
-	.row:nth-child(2n) {
-	  align-items: center;
-	  justify-content: space-between;
+	.blockGroup {
 	  width: 100%;
 
-	  .label {
-		#fontStack2;
+	  &:not(:first-child) {
+		margin-top: @margin-block;
 	  }
-	}
 
-	.row:nth-child(2n-1) {
-	  align-items: center;
+	  .row {
+		margin-top: @margin-block;
+	  }
 
-	  .label {
-		margin-left: @margin-label;
+	  .row:first-child {
+		align-items: center;
+
+		.label {
+		  margin-left: @margin-block;
+		}
+	  }
+
+	  .row:nth-child(2) {
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		.label {
+		  #fontStack2;
+		}
 	  }
 	}
 
 	.buttonContainer {
-	  margin-top: @margin-block;
+	  margin-top: @margin-button;
 	}
   }
 }
@@ -43,27 +56,32 @@
 	width: 100%;
 	height: 100%;
 
-	> .row .button {
-	  width: 280px;
+	> .row {
 	  margin-top: @margin-block;
+
+	  .button {
+		width: 280px;
+	  }
 	}
 
-	> .column {
+	.container {
 	  height: 100%;
 	  width: fit-content;
 
-	  .row:nth-child(2n) {
-		flex-direction: column;
-		align-items: flex-start;
+	  .blockGroup {
+		margin-top: @margin-block;
 
-		.formInput {
-		  width: 280px;
+		.row:nth-child(2) {
+		  flex-direction: column;
+		  align-items: flex-start;
+
+		  .formInput {
+			width: 280px;
+		  }
+		  .label{
+			margin-bottom: @margin-label;
+		  }
 		}
-	  }
-
-	  .row:nth-child(2n - 1):not(.buttonContainer) {
-		//border: 1px solid red;
-		margin-top: @margin-group;
 	  }
 
 	  .buttonContainer {

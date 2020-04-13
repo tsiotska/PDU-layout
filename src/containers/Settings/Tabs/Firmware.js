@@ -5,7 +5,7 @@ function Firmware() {
 		<div className="FirmwareWrapper">
 			<div className="title">Firmware</div>
 
-			<div className="column">
+			<div className="column container">
 				<div className="row">
 					<p className="label">
 						Firmware version

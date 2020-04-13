@@ -6,13 +6,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px;
+  padding: @padding-desktop;
 
-  .heading {
-	width: fit-content;
-	padding: 0 10px;
-	background-color: @active-mode-bg;
-  }
 
   .row {
 	#flex-space-around;
@@ -26,6 +21,13 @@
   .container {
 	display: flex;
 	flex-direction: column;
+	margin-top: @margin-block;
+
+	.heading {
+	  width: fit-content;
+	  padding: @margin-label;
+	  background-color: @active-mode-bg;
+	}
 
 	.stateGroup {
 	  border-top: 2px solid @third-color;
@@ -38,6 +40,7 @@
 
 		.description {
 		  #fontStack6;
+		  margin-top: @margin-label;
 		}
 	  }
 
@@ -51,9 +54,9 @@
 	}
 
 	.outputsGrid {
-	  height: 250px;
+	  height: 200px;
 	  align-items: unset;
-	  padding: 20px;
+	  margin-top: @margin-block;
 
 	  .column {
 		align-items: start;
@@ -63,7 +66,7 @@
 		  align-items: flex-start;
 		}
 
-		div {
+		div { //For everything
 		  #flex-start-centered;
 		  height: 100%;
 		}
@@ -74,9 +77,13 @@
 		  display: none;
 		}
 
-		.column .column {
-		  height: auto;
-		  justify-content: flex-start;
+		.column .Output {
+		  #flex-center;
+		  align-items: flex-start;
+
+		  .outputName {
+			margin-top: @margin-label;
+		  }
 		}
 	  }
 	}
@@ -85,15 +92,15 @@
 
 @media screen and (max-width: 767px) {
   .OutletsWrapper {
-	padding: 3vh 3vw;
-
-	.heading {
-	  background-color: transparent;
-	}
+	padding: @padding-mobile;
 
 	.container {
 	  display: flex;
 	  flex-direction: column;
+
+	  .heading {
+		background-color: transparent;
+	  }
 
 	  .stateGroupMobile {
 		display: flex;
@@ -112,6 +119,7 @@
 			.mode {
 			  #flex-center;
 			  width: 100%;
+			  padding: @margin-label;
 			}
 
 			.is-active { //I cannot merge is-active into states and descriptionWrapper

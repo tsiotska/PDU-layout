@@ -4,14 +4,14 @@ const MQTT = () => (
 	<div className="mqttWrapper">
 		<div className="title">MQTT</div>
 
-		<div className="column">
+		<div className="column container">
 
 			<div className="row switchContainer">
 				<div><Switch/></div>
 				<p className="label">Enable MQTT</p>
 			</div>
 
-			<div className="inputGroup">
+			<div className="inputContainer">
 				<div className="row">
 					<p className="label">MQTT mode</p>
 					<div><Select class="select long" options={['Generic', 'MS Azure']}/></div>
@@ -28,12 +28,12 @@ const MQTT = () => (
 				</div>
 			</div>
 
-			<div className="row">
+			<div className="row checkboxContainer">
 				<div><Checkbox/></div>
 				<p className="label">Use credentials</p>
 			</div>
 
-			<div className="inputGroup">
+			<div className="inputContainer">
 				<div className="row">
 					<p className="label">Username</p>
 					<div><Input class="formInput long"/></div>
@@ -45,7 +45,7 @@ const MQTT = () => (
 				</div>
 			</div>
 
-			<div className="checkboxGroup">
+			<div className="checkboxContainer">
 				<div className="row">
 					<div><Checkbox/></div>
 					<p className="label">Use SSL</p>
@@ -57,7 +57,7 @@ const MQTT = () => (
 				</div>
 			</div>
 
-			<div className="inputGroup">
+			<div className="inputContainer">
 				<div className="row">
 					<p className="label">Client Id</p>
 					<div><Input class="formInput long" value="Example PDU"/></div>

@@ -1,15 +1,15 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
 
+//Some badly, but workable
 .OverviewWrapper {
   #flex-column-start;
   width: 100%;
-  padding: 20px 40px;
+  padding: @padding-desktop;
 
   .table {
 	#flex-start-centered;
 	width: 100%;
-	padding: 20px;
+	padding: 20px 20px 20px 0;
 
 	.row { //default for every row inside a table.
 	  justify-content: space-between;
@@ -47,7 +47,7 @@
 			  width: 100%;
 
 			  .column {
-				margin-left: 20px;
+				margin-left: @margin-block;
 			  }
 			}
 		  }

@@ -1,4 +1,5 @@
 @import './mixins/mixins';
+@import "./reset";
 @import '../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
@@ -7,28 +8,7 @@
 @import '../elements/index';
 @import '../patterns/index';
 
-html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: @font-family;
-  font-size: 13px;
-  font-style: normal;
-  letter-spacing: normal;
-  font-weight: 400;
-  color: #444;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
 
-
-
-* {
-  box-sizing: border-box;
-}
 
 .Wrapper {
   position: relative;
@@ -108,7 +88,5 @@ There are default declaration */
 }
 
 @media screen and (max-width: 767px) {
-  .Wrapper .Components .pageScroll .page {
-	//height: 90vh;
-  }
+
 }

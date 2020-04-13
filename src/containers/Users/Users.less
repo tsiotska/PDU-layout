@@ -10,9 +10,13 @@
 	padding: @padding-desktop;
 
 	.container {
-	  .inputGroup {
+
+	  .inputContainer {
+		margin-top: @margin-block;
+
 		.row {
 		  #flex-space-between;
+		  margin-top: @margin-label;
 
 		  .label {
 			color: @text-muted;
@@ -20,8 +24,9 @@
 		}
 	  }
 
-	  .switchGroup {
+	  .switchContainer {
 		.row {
+		  margin-top: @margin-block;
 		  #flex-start-centered;
 
 		  .label {
@@ -30,8 +35,8 @@
 		}
 	  }
 
-	  .buttonContainer { //> .row:last-child
-		margin-top: @margin-block;
+	  .buttonContainer {
+		margin-top: @margin-button;
 	  }
 	}
   }
@@ -51,7 +56,7 @@
 		.tabBtn {
 		  margin-top: auto;
 
-		  .middle {
+		  Button.middle {
 			width: 280px;
 		  }
 		}
@@ -69,20 +74,32 @@
 	  }
 
 	  .column {
-		.inputGroup .row {
-		  flex-direction: column;
-		  align-items: flex-start;
+		.inputContainer {
+		  margin: 0;
 
-		  .formInput {
-			width: 280px;
+		  .row {
+			flex-direction: column;
+			align-items: flex-start;
+
+			&:not(:first-child) {
+			  margin-top: @margin-block;
+			}
+
+			.formInput {
+			  width: 280px;
+			}
+
+			.label {
+			  margin-bottom: @margin-label;
+			}
 		  }
 		}
 
-		.switchGroup {
-		  margin-top: @margin-block;
+		.switchContainer {
+		  // margin-top: @margin-block;
 		}
 
-		.buttonContainer { //> .row:last-child
+		.buttonContainer {
 		  margin-top: @margin-block;
 
 		  .button {

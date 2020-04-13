@@ -3,8 +3,8 @@
 .FirmwareWrapper {
   width: 400px;
 
-  > .column {
-	> .row {
+  .container {
+	.row {
 	  align-items: center;
 
 	  .label {
@@ -16,7 +16,7 @@
 		width: 100%
 	  }
 
-	  .buttonContainer { //&:last-child
+	  .buttonContainer {
 		margin-top: @margin-block;
 	  }
 	}
@@ -30,18 +30,26 @@
 	width: 100%;
 	height: 100%;
 
-	> .column {
+	.container {
 	  height: 100%;
 
-	  > .row {
+	  .row {
 		flex-direction: column;
 
-		.Dropzone{
+		&:not(:first-child) {
+		  margin-top: @margin-block;
+		}
+
+		.label {
+		  margin-bottom: @margin-label;
+		}
+
+		.Dropzone {
 		  width: 100%;
 		}
 	  }
 
-	  .buttonContainer { //&:last-child
+	  .row.buttonContainer {
 		margin-top: auto;
 
 		.button {

@@ -2,16 +2,28 @@
 
 .mqttWrapper {
 
-  .column {
+  .container {
 	align-items: flex-start;
 	width: 400px;
+	margin-top: @margin-block;
 
-	//inputs
-	.inputGroup {
+	.switchContainer {
+	  #flex-start-centered;
+	}
+
+	.switchContainer, .checkboxContainer {
+	  .label {
+		margin-left: @margin-label;
+	  }
+	}
+
+	.inputContainer {
 	  width: 100%;
+	  margin-top: @margin-block;
 
 	  .row {
 		#flex-space-between;
+		margin-top: @margin-label;
 
 		.label {
 		  #fontStack2;
@@ -23,23 +35,17 @@
 	  }
 	}
 
-	.checkboxGroup { //Simulate checkboxes nesting
-	  .row:nth-child(2) {
+	.checkboxContainer {
+	  margin-top: @margin-block;
+
+	  .row:not(:first-child) {
+		margin-top: @margin-block;
 		margin-left: @margin-block;
 	  }
 	}
 
-	//and others (alone switches and checkboxes)
-	.row {
-	  #flex-start-centered;
-
-	  .label {
-		margin-left: @margin-label;
-	  }
-	}
-
 	.buttonContainer .button { //> .row:last-child
-	  margin-top: @margin-block;
+	  margin-top: @margin-button;
 	}
   }
 }
@@ -50,22 +56,30 @@
 	flex-direction: column;
 	width: 100%;
 
-	.column {
+	.container {
 	  height: 100%;
 	  width: fit-content;
+	  margin: 0;
 
-	  .checkboxGroup {
+	  .checkboxContainer {
 		margin-top: @margin-block;
 	  }
 
-	  >.row {
+	  > .row {
 		margin-top: @margin-block;
 	  }
 
-	  .inputGroup {
+	  .inputContainer {
+		margin: 0;
+
 		.row {
 		  flex-direction: column;
 		  align-items: flex-start;
+		  margin-top: @margin-block;
+
+		  .label {
+			margin-bottom: @margin-label;
+		  }
 		}
 
 		.alignLeft {

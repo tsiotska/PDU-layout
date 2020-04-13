@@ -2,11 +2,20 @@
 
 .NetworkWrapper {
 
-  .column {
-	.container { // .column:first-child
+  .container {
+	.form {
 	  width: 400px;
+	  margin-top: @margin-block;
 
-	  .inputGroup {
+	  .row {
+		margin-top: @margin-label;
+	  }
+
+	  .inputContainer {
+		~ .nested {
+		  margin-left: @margin-block;
+		}
+
 		.row {
 		  #flex-space-between;
 
@@ -15,27 +24,27 @@
 		  }
 
 		  .value {
-			width: 280px;
+			width: @mobile-element;
 		  }
 		}
 	  }
 
-	  .radioGroup {
+	  .radioContainer {
 		.row {
 		  #flex-start-centered;
 		  width: 100%;
 		}
 	  }
 
-	  .buttonContainer  { // > .row:last-child
-		margin-top: @margin-block;
+	  .buttonContainer {
+		margin-top: @margin-button;
 	  }
 	}
 
-	 .footer {
+	.footer {
 	  border-top: 2px solid @third-color;
 	  margin-top: @margin-block;
-	  padding-top: 20px;
+	  padding-top: @margin-block;
 
 	  .row {
 		align-items: center;
@@ -43,6 +52,10 @@
 		.label {
 		  margin-left: @margin-label;
 		}
+	  }
+
+	  .warning {
+		margin-top: @margin-label;
 	  }
 	}
   }
@@ -52,21 +65,46 @@
   .NetworkWrapper {
 	#flex-column-start;
 
-	>.column {
+	.container {
 	  align-items: center;
-	  .container {
-		width: fit-content;
 
-		.inputGroup {
+	  .form {
+		align-items: center;
+		width: fit-content;
+		margin: 0;
+
+
+		.inputContainer {
+		  &:first-child .row:first-child {
+			margin: 0;
+		  }
+
+		  ~ .nested {
+			margin-left: 0;
+		  }
+
 		  .row {
 			flex-direction: column;
 			align-items: flex-start;
+			margin-top: @margin-block;
+
+			.label {
+			  margin-bottom: @margin-label;
+			}
 		  }
 		}
 
-		.buttonContainer { // > .row:last-child
+		.radioContainer {
+		  width: @mobile-element;
+
+		  .row {
+			margin-top: @margin-block;
+		  }
+		}
+
+		.buttonContainer {
 		  .button {
-			width: 280px;
+			width: @mobile-element;
 		  }
 		}
 	  }

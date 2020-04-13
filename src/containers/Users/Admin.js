@@ -9,7 +9,7 @@ function Admin() {
 
 			<div className="column container">
 
-				<div className="inputGroup">
+				<div className="inputContainer">
 					<div className="row">
 						<div className="label">
 							<p>Username</p>
@@ -38,7 +38,7 @@ function Admin() {
 					</div>
 				</div>
 
-				<div className="switchGroup">
+				<div className="switchContainer">
 					<div className="row">
 						<div>
 							<Switch />

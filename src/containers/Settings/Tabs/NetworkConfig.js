@@ -7,11 +7,11 @@ function NetworkConfig() {
 				Network Configuration
 			</div>
 
-			<div className="column">
+			<div className="column container">
 
-				<div className="column container">
+				<div className="column form">
 
-					<div className="inputGroup">
+					<div className="inputContainer">
 						<div className="row">
 							<p className="label">MAC address</p>
 							<div className="value">24:A4:2C:39:2E:D4</div>
@@ -25,7 +25,7 @@ function NetworkConfig() {
 						</div>
 					</div>
 
-					<div className="column radioGroup">
+					<div className="column radioContainer">
 						<div className="row">
 							<p><RadioButton label="Use DHCP" name="adresses"/></p>
 						</div>
@@ -35,7 +35,7 @@ function NetworkConfig() {
 						</div>
 					</div>
 
-					<div className="inputGroup">
+					<div className="inputContainer nested">
 						<div className="row"><p className="label">IP address</p>
 							<div><Input class="formInput long" value="31.7.241.131" /></div>
 						</div>
@@ -66,7 +66,7 @@ function NetworkConfig() {
 						<div><Button class="light" value="locale" /></div>
 						<div className="label">Blink with status LEDs for 1 minute.</div>
 					</div>
-					<div className="row">
+					<div className="row warning">
 						<p><b>Warning</b>: Changes to network settings may result in PowerPDU 4C becoming unavailable at the current
 							address. See the PowerPDU 4C User Manual for ways to find the PowerPDU 4C at its new address.</p>
 					</div>

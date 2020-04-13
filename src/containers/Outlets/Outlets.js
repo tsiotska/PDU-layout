@@ -21,11 +21,12 @@ export default class Outlets extends Component {
 					<p> Outlets </p>
 				</div>
 
-				<div className="heading">
-					<p>Restore mode</p>
-				</div>
 
 				<div className="container">
+
+					<div className="heading">
+						<p>Restore mode</p>
+					</div>
 
 					<div className="row stateGroup">
 						<div className={"column " + (selectedMode === restoreModes[0] ? "is-active" : "")}>
@@ -92,14 +93,14 @@ export default class Outlets extends Component {
 									<p className="description">
 										Initially, both flip-flops are reset,
 										and the Q output of the second flip-flop is high,
-										so the 74HC03 pulls the EN line to
+										so the 74HC03 pulls the EN line to ground
 									</p>
 								</div>
 								<div className={"descriptionContainer " + (selectedMode === restoreModes[2] ? "is-active" : "")}>
 									<p className="description">
 										Initially, both flip-flops are reset,
 										and the Q output of the second flip-flop is high,
-										so the 74HC03 pulls the EN line to
+										so the 74HC03 pulls the EN line to ground
 									</p>
 								</div>
 							</div>
@@ -137,7 +138,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="On" alt="output"/>
-									<p>Output_1</p>
+									<p className="outputName">Output_1</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -146,7 +147,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="On" alt="output"/>
-									<p>Output_2</p>
+									<p className="outputName">Output_2</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -155,7 +156,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="On" alt="output"/>
-									<p>Output_3</p>
+									<p className="outputName">Output_3</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -180,7 +181,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="On" alt="output"/>
-									<p>Output_4</p>
+									<p className="outputName">Output_4</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -189,7 +190,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="Error" alt="output"/>
-									<p>Output_5</p>
+									<p className="outputName">Output_5</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -198,7 +199,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="Overload" alt="output"/>
-									<p>Output_6</p>
+									<p className="outputName">Output_6</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -222,7 +223,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="Off" alt="output"/>
-									<p>Output_7</p>
+									<p className="outputName">Output_7</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -231,7 +232,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="Off" alt="output"/>
-									<p>Output_8</p>
+									<p className="outputName">Output_8</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
@@ -240,7 +241,7 @@ export default class Outlets extends Component {
 							<div className="column">
 								<div className="column Output">
 									<Output className="Off" alt="output"/>
-									<p>Output_9</p>
+									<p className="outputName">Output_9</p>
 								</div>
 								<div className="Switch"><Switch/></div>
 								<div className="TextBox"><TextBox value={110}/></div>
