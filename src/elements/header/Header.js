@@ -1,14 +1,15 @@
 import {Dropdown} from '../../patterns';
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../constants';
+import Hamburger from '../../assets/round-menu.svg';
+import UserIcon from '../../assets/outline-account-circle.svg';
+import Cross from '../../assets/round-close.svg';
 
-const Header = (props) => (
+const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserProfile}) => (
 	<div className="header">
 
-		<div className={"hamburger iconContainer " + (props.closeRoutes ? "cross" : "")} name="routes"
-				 onClick={props.toggleSidebar}>
-			<img src={props.closeRoutes ? "../../assets/round-close.svg" : "../../assets/round-menu.svg"}
-					 className="icon" alt="hamburger"/>
+		<div className={"hamburger iconContainer " + (isSidebarOpened ? "cross" : "")} onClick={toggleSidebar}>
+			{isSidebarOpened ? <Cross className="icon"/> : <Hamburger className="icon"/>}
 		</div>
 
 		<div className="logoContainer">
@@ -20,8 +21,8 @@ const Header = (props) => (
 			<div className="element">
 				<Dropdown
 					iconUrl="../../assets/earth-outline.svg"
-					list={['English', 'Turkish', 'Ukrainian',]}
-				/></div>
+					list={['English', 'Turkish', 'Ukrainian',]}/>
+			</div>
 
 			<Link className="element" href={ROUTE.PROFILE}>
 				<div className="iconContainer">
@@ -38,9 +39,9 @@ const Header = (props) => (
 			</Link>
 		</div>
 
-		<div className={"hamburger iconContainer " + (props.closeUserMenu ? "cross" : "")} name="user_menu" onClick={props.toggleSidebar}>
-			<img src={props.closeUserMenu ? "../../assets/round-close.svg" : "../../assets/more-vertical.svg"}
-					 className="icon" alt="hamburger"/>
+		<div className={"hamburger iconContainer " + (isUserMenuOpened ? "cross" : "")} name="user_menu">
+			{isUserMenuOpened ? <Cross onClick={toggleUserProfile}  className="icon"/> :
+				<Link onClick={toggleUserProfile}  href={ROUTE.PROFILE}><UserIcon className="icon"/></Link>}
 		</div>
 	</div>
 );

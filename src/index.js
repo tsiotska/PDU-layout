@@ -5,7 +5,7 @@ import store from './store';
 
 import './globalStyles/index.less';
 
-import {ROUTE, SIDEBAR_TYPE} from './constants';
+import {ROUTE} from './constants';
 import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile} from './containers';
 import {Header, Sidebar} from './elements';
 
@@ -16,9 +16,8 @@ class Main extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			currentSidebar: SIDEBAR_TYPE.ROUTES,
-			closeRoutes: false,
-			closeUserMenu: false,
+			isSidebarOpened: false,
+			isUserMenuOpened: false,
 			isItMobile: window.innerWidth <= 767
 		};
 	}
@@ -33,14 +32,12 @@ class Main extends Component {
 		if (width > 767 && this.state.isItMobile) {
 			this.setState({
 				isItMobile: !this.state.isItMobile,
-				currentSidebar: SIDEBAR_TYPE.ROUTES
 			})
-				//Then from pc to mobile
+			//Then from pc to mobile
 		} else if (width <= 767 && !this.state.isItMobile) {
 			this.setState({
 				isItMobile: !this.state.isItMobile,
-				closeRoutes: false,
-				closeUserMenu: false,
+				isSidebarOpened: false,
 			});
 			//If sidebar was opened, let him be closed...
 			if (this.sidebarRef.current.classList.value.includes('sidebarVisible')) {
@@ -49,36 +46,27 @@ class Main extends Component {
 		}
 	};
 
-	toggleSidebar = (event) => {
-		const {currentSidebar, closeRoutes, closeUserMenu} = this.state,
-			sidebar = this.sidebarRef.current.classList,
-			type = event.currentTarget.attributes.getNamedItem('name').value;
+	toggleSidebar = () => {
+		this.sidebarRef.current.classList.toggle('sidebarVisible');
+		this.setState({isSidebarOpened: !this.state.isSidebarOpened})
+	};
 
-		if (currentSidebar !== type && sidebar.value.includes('sidebarVisible')) {
-			this.setState({closeRoutes: !closeRoutes, closeUserMenu: !closeUserMenu});
-		} else if (type === 'routes') {
-			this.setState({closeRoutes: !closeRoutes});
-			sidebar.toggle('sidebarVisible');
-		} else {
-			this.setState({closeUserMenu: !closeUserMenu});
-			sidebar.toggle('sidebarVisible');
-		}
-		if (currentSidebar !== type)
-			this.setState({currentSidebar: type});
+	toggleUserProfile = () => {
+		console.log("WELL!")
+		this.setState({isUserMenuOpened: !this.state.isUserMenuOpened})
 	};
 
 	//Auth router must be outside of header and sidebar! Rrr
-	render({}, {currentSidebar, closeRoutes, closeUserMenu, isItMobile}) {
+	render({}, {isSidebarOpened, isUserMenuOpened, isItMobile}) {
 		return (
 			<ResizeObserver class="fluid-content" onResize={this.handleResize}>
 				<div className="Wrapper">
 
-					<Header isItMobile={isItMobile} closeRoutes={closeRoutes}
-									closeUserMenu={closeUserMenu} toggleSidebar={this.toggleSidebar}/>
+					<Header isSidebarOpened={isSidebarOpened} isUserMenuOpened={isUserMenuOpened}
+									toggleSidebar={this.toggleSidebar} toggleUserProfile={this.toggleUserProfile}/>
 
 					<div className="Components">
-						<Sidebar isItMobile={isItMobile} sidebarRef={this.sidebarRef} toggleSidebar={this.toggleSidebar}
-										 render={currentSidebar}/>
+						<Sidebar isItMobile={isItMobile} sidebarRef={this.sidebarRef} toggleSidebar={this.toggleSidebar}/>
 
 						<div className="pageScroll">
 
