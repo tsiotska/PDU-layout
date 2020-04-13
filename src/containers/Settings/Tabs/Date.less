@@ -2,12 +2,13 @@
 
 .DateWrapper {
 
-  .column {
+  .container {
 	width: 400px;
 
 	.inputGroup {
 	  .row {
 		#flex-space-between;
+		margin-top: @margin-block;
 
 		.label {
 		  #fontStack2;
@@ -15,8 +16,8 @@
 	  }
 	}
 
-	.buttonContainer { // > .row:last-child
-	  margin-top: @margin-block;
+	.buttonContainer {
+	  margin-top: @margin-button;
 	}
   }
 }
@@ -27,7 +28,7 @@
 	align-items: center;
 	height: 100%;
 
-	.column {
+	.container {
 	  height: 100%;
 	  width: 100%;
 
@@ -42,7 +43,7 @@
 		}
 	  }
 
-	  .buttonContainer { //> .row:last-child
+	  .buttonContainer {
 		margin-top: auto;
 
 		.button {

@@ -6,7 +6,7 @@ import store from './store';
 import './globalStyles/index.less';
 
 import {ROUTE, SIDEBAR_TYPE} from './constants';
-import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth} from './containers';
+import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile} from './containers';
 import {Header, Sidebar} from './elements';
 
 import ResizeObserver from 'preact-resize-observer';
@@ -86,6 +86,7 @@ class Main extends Component {
 								<Provider store={store}>
 									<Router>
 										<Auth path={ROUTE.LOGIN}/>
+										<Profile path={ROUTE.PROFILE}/>
 										<Outlets path={ROUTE.OUTLETS} default/>
 										<Overview path={ROUTE.OVERVIEW}/>
 										<Protocols path={ROUTE.PROTOCOLS}/>

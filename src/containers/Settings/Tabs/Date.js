@@ -5,7 +5,7 @@ function Date() {
 		<div className="DateWrapper">
 			<div className="title">Date/Time</div>
 
-			<div className="column">
+			<div className="column container">
 				<div className="inputGroup">
 					<div className="row">
 						<p className="label">

@@ -20,18 +20,15 @@ const Header = (props) => (
 			<div className="element">
 				<Dropdown
 					iconUrl="../../assets/earth-outline.svg"
-					list={[
-						'English', 'Turkish', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian',
-						'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian', 'Ukrainian'
-					]}
+					list={['English', 'Turkish', 'Ukrainian',]}
 				/></div>
 
-			<div className="element">
+			<Link className="element" href={ROUTE.PROFILE}>
 				<div className="iconContainer">
 					<img className="icon" src="../../assets/outline-account-circle.svg" alt="user-outlined"/>
 				</div>
 				<p className="label"> UserName </p>
-			</div>
+			</Link>
 
 			<Link className="element" href={ROUTE.LOGIN}>
 				<div className="iconContainer">
