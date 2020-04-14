@@ -6,7 +6,8 @@ const ROUTE = {
 	USERS: '/users/:page?',
 	SETTINGS: '/settings/:page?',
 	LOGIN: '/login',
-	PROFILE: '/profile'
+	PROFILE: '/profile',
+	LANGUAGES: '/languages'
 };
 
 export default ROUTE;

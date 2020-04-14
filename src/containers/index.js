@@ -6,3 +6,4 @@ export { default as Settings } from './Settings/Settings';
 export { default as Users } from './Users/Users';
 export { default as Auth } from './Auth/Auth';
 export { default as Profile } from './Profile/Profile';
+export { default as Languages } from './Languages/Languages';

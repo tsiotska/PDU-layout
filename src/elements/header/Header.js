@@ -5,7 +5,7 @@ import Hamburger from '../../assets/round-menu.svg';
 import UserIcon from '../../assets/outline-account-circle.svg';
 import Cross from '../../assets/round-close.svg';
 
-const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserProfile}) => (
+const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserProfile, languages}) => (
 	<div className="header">
 
 		<div className={"hamburger iconContainer " + (isSidebarOpened ? "cross" : "")} onClick={toggleSidebar}>
@@ -21,7 +21,7 @@ const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserPro
 			<div className="element">
 				<Dropdown
 					iconUrl="../../assets/earth-outline.svg"
-					list={['English', 'Turkish', 'Ukrainian',]}/>
+					list={languages}/>
 			</div>
 
 			<Link className="element" href={ROUTE.PROFILE}>

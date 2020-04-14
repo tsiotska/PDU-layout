@@ -1,10 +1,9 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
 
 .header {
   #flex-space-between;
   width: 100%;
-  height: 60px;
+  height: @header-height;
   background-color: @fifth-color;
 
   .iconContainer.hamburger {
@@ -18,6 +17,17 @@
 
 	.icon {
 	  width: 26px;
+	}
+	.icon {
+	  width: 26px;
+	}
+
+	.color {
+	  fill: @link-color;
+	}
+
+	.outline{
+	  stroke: @link-color;
 	}
   }
 

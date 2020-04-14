@@ -1,10 +1,15 @@
-import { Button, Input, Switch } from '../../patterns';
+import {Button, Input, Switch} from '../../patterns';
+import Cross from "../../assets/round-close.svg";
 
-function Admin() {
+const Admin = ({turnBack}) => {
 	return (
 		<div className="AdminWrapper">
-			<div className="title">
-				User Settings
+
+			<div className="row head">
+				<Cross onClick={turnBack} className="icon"/>
+				<div className="title">
+					User Settings
+				</div>
 			</div>
 
 			<div className="column container">
@@ -15,7 +20,7 @@ function Admin() {
 							<p>Username</p>
 						</div>
 						<div>
-							<Input class="formInput middle" value="Admin" />
+							<Input class="formInput middle" value="Admin"/>
 						</div>
 					</div>
 
@@ -24,7 +29,7 @@ function Admin() {
 							<p>Password</p>
 						</div>
 						<div>
-							<Input class="formInput middle" />
+							<Input class="formInput middle"/>
 						</div>
 					</div>
 
@@ -33,7 +38,7 @@ function Admin() {
 							<p>Confirm Password</p>
 						</div>
 						<div>
-							<Input class=" formInput middle" />
+							<Input class=" formInput middle"/>
 						</div>
 					</div>
 				</div>
@@ -41,7 +46,7 @@ function Admin() {
 				<div className="switchContainer">
 					<div className="row">
 						<div>
-							<Switch />
+							<Switch/>
 						</div>
 						<div className="label">
 							<p>Outlets configuration</p>
@@ -50,7 +55,7 @@ function Admin() {
 
 					<div className="row">
 						<div>
-							<Switch />
+							<Switch/>
 						</div>
 						<div className="label">
 							<p>API configuration</p>
@@ -59,7 +64,7 @@ function Admin() {
 
 					<div className="row">
 						<div>
-							<Switch />
+							<Switch/>
 						</div>
 						<div className="label">
 							<p>Manage users</p>
@@ -68,7 +73,7 @@ function Admin() {
 
 					<div className="row">
 						<div>
-							<Switch />
+							<Switch/>
 						</div>
 						<div className="label">
 							<p>Settings management</p>
@@ -77,7 +82,7 @@ function Admin() {
 				</div>
 
 				<div className="row buttonContainer">
-					<div><Button class="small disabled" value="Save Changes" /></div>
+					<div><Button class="small disabled" value="Save Changes"/></div>
 				</div>
 
 			</div>

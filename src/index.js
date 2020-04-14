@@ -6,7 +6,7 @@ import store from './store';
 import './globalStyles/index.less';
 
 import {ROUTE} from './constants';
-import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile} from './containers';
+import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile, Languages} from './containers';
 import {Header, Sidebar} from './elements';
 
 import ResizeObserver from 'preact-resize-observer';
@@ -18,7 +18,8 @@ class Main extends Component {
 		this.state = {
 			isSidebarOpened: false,
 			isUserMenuOpened: false,
-			isItMobile: window.innerWidth <= 767
+			isItMobile: window.innerWidth <= 767,
+			languages: ['English', 'Turkish', 'Ukrainian']
 		};
 	}
 
@@ -57,13 +58,14 @@ class Main extends Component {
 	};
 
 	//Auth router must be outside of header and sidebar! Rrr
-	render({}, {isSidebarOpened, isUserMenuOpened, isItMobile}) {
+	render({}, {isSidebarOpened, isUserMenuOpened, isItMobile, languages}) {
 		return (
 			<ResizeObserver class="fluid-content" onResize={this.handleResize}>
 				<div className="Wrapper">
 
 					<Header isSidebarOpened={isSidebarOpened} isUserMenuOpened={isUserMenuOpened}
-									toggleSidebar={this.toggleSidebar} toggleUserProfile={this.toggleUserProfile}/>
+									toggleSidebar={this.toggleSidebar} toggleUserProfile={this.toggleUserProfile}
+									languages={languages}/>
 
 					<div className="Components">
 						<Sidebar isItMobile={isItMobile} sidebarRef={this.sidebarRef} toggleSidebar={this.toggleSidebar}/>
@@ -75,11 +77,12 @@ class Main extends Component {
 									<Router>
 										<Auth path={ROUTE.LOGIN}/>
 										<Profile path={ROUTE.PROFILE}/>
+										<Languages languages={languages} path={ROUTE.LANGUAGES}/>
 										<Outlets path={ROUTE.OUTLETS} default/>
 										<Overview path={ROUTE.OVERVIEW}/>
 										<Protocols path={ROUTE.PROTOCOLS}/>
 										<Settings path={ROUTE.SETTINGS}/>
-										<Users path={ROUTE.USERS}/>
+										<Users isItMobile={isItMobile} path={ROUTE.USERS}/>
 										<Logs path={ROUTE.LOGS}/>
 									</Router>
 								</Provider>

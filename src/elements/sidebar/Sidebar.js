@@ -1,9 +1,9 @@
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../constants';
 //import {Dropdown} from '../../patterns';
+import Earth from "../../assets/earth-outline.svg";
 
- const Sidebar = ({toggleSidebar, sidebarRef}) => {
-
+ const Sidebar = ({toggleSidebar, sidebarRef, isItMobile}) => {
 	return (
 		<div ref={sidebarRef} className="sidebar">
 		<nav className="navList">
@@ -55,6 +55,14 @@ import {ROUTE} from '../../constants';
 					</div>
 					<p className="label">Settings</p></div>
 			</Link>
+
+			{isItMobile &&	<Link onClick={toggleSidebar} activeClassName="is-active" className="navLink languages" href={ROUTE.LANGUAGES}>
+				<div className="contextContainer">
+					<div className="iconContainer">
+						<Earth className="icon"/>
+					</div>
+					<p className="label">Languages</p></div>
+			</Link>}
 		</nav>
 	</div>)
 };
