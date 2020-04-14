@@ -88,6 +88,6 @@ const Admin = ({turnBack}) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Admin;

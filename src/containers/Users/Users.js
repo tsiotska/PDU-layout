@@ -1,28 +1,29 @@
-import {Component} from 'preact';
+import {Component, createRef} from 'preact';
 import {Link} from 'preact-router/match';
 import {Button} from '../../patterns';
 import Admin from './Admin';
 
 export default class Users extends Component {
-	state = {isPanelFullScreen: this.props.isItMobile && this.props.page && this.props.page === ':page'};
 
-	turnBack = () => {
-		this.setState({isPanelFullScreen: true})
-		window.location.pathname = ":page"; //Придумай тут шось.
-	};
+	componentRef = createRef();
+	panelRef = createRef();
 
-	componentDidUpdate(prevProps, prevState) {
-		const {page, isItMobile} = this.props;
-
-		console.log(prevProps.page)
-		console.log(this.props.page)
-		console.log(prevProps.page !== this.props.page)
-
-		//if route is selected, then close panel
-		if (prevProps.page !== this.props.page && isItMobile && page && page !== ':page') {
-			this.setState({isPanelFullScreen: false})
+	componentDidMount() {
+		if (this.props.isItMobile) {
+			this.componentRef.current.classList.toggle('is-hidden');
 		}
 	}
+
+	componentDidUpdate(prevProps, prevState) {
+		if (this.props.isItMobile && this.props.page !== ":page") {
+			this.toggleMobilePanel();
+		}
+	}
+
+	toggleMobilePanel = () => {
+		this.panelRef.current.classList.toggle('is-hidden');
+		this.componentRef.current.classList.toggle('is-hidden');
+	};
 
 	get component() {
 		const {page, isItMobile} = this.props;
@@ -35,16 +36,15 @@ export default class Users extends Component {
 	};
 
 	subComponents = {
-		Admin: <Admin turnBack={this.turnBack}/>
+		Admin: <Admin turnBack={this.toggleMobilePanel}/>
 	};
 
-	render({page, isItMobile}, {isPanelFullScreen}) {
+	render({page}) {
 
 		return (
 			<div className="UsersWrapper">
 
-				{(isPanelFullScreen || !isItMobile) &&
-				<div className="panel">
+				<div ref={this.panelRef} className="panel">
 					<div className="title">Users</div>
 					<div className="nav">
 						<Link href={`/users/${this.subRoutes.Admin}`} activeClassName="is-active" className="tab">Admin</Link>
@@ -54,9 +54,9 @@ export default class Users extends Component {
 						</Link>
 						<div className="tabBtn"><Button class="middle disabled" value="Create user"/></div>
 					</div>
-				</div>}
+				</div>
 
-				{!isPanelFullScreen && this.component}
+				<div ref={this.componentRef} className="component">  {this.component} </div>
 			</div>
 		);
 	}

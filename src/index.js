@@ -53,7 +53,6 @@ class Main extends Component {
 	};
 
 	toggleUserProfile = () => {
-		console.log("WELL!")
 		this.setState({isUserMenuOpened: !this.state.isUserMenuOpened})
 	};
 
