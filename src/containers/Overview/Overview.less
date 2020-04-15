@@ -1,5 +1,10 @@
 @import '../../globalStyles/mixins/mixins';
 
+@ground-active: #f2ec33;
+@ground-disabled: #d6d6d6;
+
+@label-width: 100px;
+
 //Some badly, but workable
 .OverviewWrapper {
   #flex-column-start;
@@ -7,9 +12,8 @@
   padding: @padding-desktop;
 
   .table {
-	#flex-start-centered;
-	width: 100%;
-	padding: 20px 20px 20px 0;
+	width: 90%;
+	padding: 20px 0;
 
 	.row { //default for every row inside a table.
 	  justify-content: space-between;
@@ -17,104 +21,164 @@
 	}
 
 	//Here starts our awkward tree...
-	> .column { //Three column at all
-	  width: 260px; //definitely width, maybe make it more flexible
-	  height: 100%;
+	.grid {
+	  #flex-start-centered;
 
-	  > .row { //We have three rows inside every column
-		margin-top: 15px;
+	  > .column { //Three column at all
+		width: 260px; //definitely width, maybe make it more flexible
+		height: 100%;
 
-		.label { //for all labels
-		  #fontStack6;
-		}
+		> .row { //We have three rows inside every column
+		  margin-top: 15px;
 
-		> .label { //labels at first two row, scroll down to see labels at columns
-		  display: flex;
-		  align-items: center;
-		  min-width: 100px;
-		  padding: 8px;
-		}
+		  .label { //for all labels
+			#fontStack6;
+		  }
 
-		&:first-child { //Defining properties for each of three rows
-		  justify-content: flex-start;
+		  > .label { //labels at first two row, scroll down to see labels at columns
+			display: flex;
+			align-items: center;
+			min-width: @label-width;
+			padding: 8px;
+		  }
 
-		  > .row {
-			border-bottom: 2px solid #E3BE3F;
-			margin-right: 30px; //cut border line
+		  &:first-child { //Defining properties for each of three rows
+			justify-content: flex-start;
 
 			> .row {
-			  justify-content: flex-start;
+			  border-bottom: 2px solid #E3BE3F;
+			  margin-right: 30px; //cut border line
+
+			  > .row {
+				justify-content: flex-start;
+				width: 100%;
+
+				.column {
+				  margin-left: @margin-block;
+				}
+			  }
+			}
+
+			.Box {
+			  #flex-center;
+			  min-width: 27px;
+			  height: 37px;
+			  color: @primary-color;
+			  background-color: #E3BE3F;
+			}
+		  }
+
+		  &:nth-child(2) {
+			justify-content: flex-start;
+
+			> .row {
 			  width: 100%;
 
 			  .column {
-				margin-left: @margin-block;
+				width: 100%;
 			  }
 			}
 		  }
 
-		  .Box {
-			#flex-center;
-			min-width: 27px;
-			height: 37px;
-			color: @primary-color;
-			background-color: #E3BE3F;
-		  }
-		}
-
-		&:nth-child(2) {
-		  justify-content: flex-start;
-
-		  > .row {
-			width: 100%;
-
-			.column {
-			  width: 100%;
-			}
-		  }
-		}
-
-		&:nth-child(3) {
-		  .column .label { //labels at column
-			min-width: 100px;
-			padding: 8px;
-
-			&:nth-child(2n - 1) {
-			  background-color: #ebf1f4;
-			}
-		  }
-
-		  .row .column {
-			width: 100%; //Connect columns in one line
-
-			.value { //Dont use here fontStack6, because it overrides color state
-			  font-size: 12px;
+		  &:nth-child(3) {
+			.column .label { //labels at column
+			  min-width: @label-width;
 			  padding: 8px;
 
-			  &:nth-child(2n-1) {
-				background-color: #ebf1f4;
+			  &:nth-child(2n - 1) {
+				background-color: @muted-bg;
+			  }
+			}
+
+			.row .column {
+			  width: 100%; //Connect columns in one line
+
+			  .value { //Dont use here fontStack6, because it overrides color state
+				font-size: 12px;
+				padding: 8px;
+
+				&:nth-child(2n-1) {
+				  background-color: @muted-bg;
+				}
 			  }
 			}
 		  }
 		}
-	  }
 
-	  &:first-child {
-		width: 360px; //Add 100px to first column to compensate label width
-	  }
+		&:first-child {
+		  width: 360px; //Add 100px to first column to compensate label width
+		}
 
-	  //Hide labels for second and third column
-	  &:nth-child(2), &:nth-child(3) {
-		> .row {
-		  &:first-child, &:nth-child(2) {
-			> .label {
+		//Hide labels for second and third column
+		&:nth-child(2), &:nth-child(3) {
+		  > .row {
+			&:first-child, &:nth-child(2) {
+			  > .label {
+				display: none;
+			  }
+			}
+
+			&:nth-child(3) .column .label {
 			  display: none;
 			}
 		  }
-
-		  &:nth-child(3) .column .label {
-			display: none;
-		  }
 		}
+	  }
+	}
+
+	.groundContainer {
+	  position: relative;
+
+	  .iconContainer {
+		#flex-center;
+		width: 100%;
+	  }
+
+	  &.groundActive {
+		#flex-start;
+
+		&:before {
+		  position: absolute;
+		  z-index: 1;
+		  width: ~'calc(100% - @{label-width})';
+		  height: 20px;
+		  content: "";
+		  bottom: 50%;
+		  margin-left: @label-width;
+		  border: 1px solid @ground-active;
+		  border-top: none;
+		}
+
+		.icon .color {
+		  fill: @ground-active;
+		}
+	  }
+
+	  &.groundDisabled {
+		#flex-start;
+
+		&:before {
+		  position: absolute;
+		  z-index: 1;
+		  width: ~'calc(100% - @{label-width})';
+		  height: 20px;
+		  content: "";
+		  bottom: 50%;
+		  margin-left: @label-width;
+		  border: 1px solid @ground-active;
+		  border-top: none;
+		}
+
+		.icon .color {
+		  fill: @ground-disabled;
+		}
+	  }
+
+	  .icon {
+		position: relative;
+		z-index: 2;
+		width: fit-content;
+		margin-left: @label-width;
 	  }
 	}
   }
@@ -123,45 +187,87 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .OverviewWrapper {
 	.table {
-	  justify-content: flex-start;
-	  overflow-x: scroll;
+	  //  overflow-x: scroll;
 	}
   }
 }
 
 @media screen and (max-width: 767px) {
   .OverviewWrapper {
-	padding: 3vh 3vw;
+	padding: @padding-mobile;
 
 	.table {
-	  flex-direction: column;
+	  #row;
+	  flex-wrap: nowrap;
 	  padding: 0;
 
-	  > .column {
-		margin-top: 15px;
+	  .grid {
+		flex-direction: column;
 
-		&:first-child { //HARD override
-		  width: 100%;
-		}
+		> .column {
+		  margin-top: 15px;
 
-		width: 100%; //And for others
+		  &:first-child { //HARD override
+			width: 100%;
+		  }
 
-		&:nth-child(2), &:nth-child(3) {
-		  > .row {
+		  width: 100%; //And for others
 
-			&:first-child, &:nth-child(2) {
-			  > .label {
+		  &:nth-child(2), &:nth-child(3) {
+			> .row {
+
+			  &:first-child, &:nth-child(2) {
+				> .label {
+				  display: flex;
+				}
+			  }
+
+			  &:nth-child(3) .column .label {
 				display: flex;
 			  }
 			}
+		  }
+		}
+	  }
 
-			&:nth-child(3) .column .label {
-			  display: flex;
-			}
+	  .groundContainer {
+		height: inherit;
+
+		.iconContainer {
+		  height: 100%;
+
+		  .icon {
+			margin-left: 0;
+		  }
+		}
+
+		&.groundActive {
+
+		  width: 100%;
+
+		  &:before {
+			width: 20px;
+			height: 100%;
+			top: 0;
+			right: 50%;
+			border-top: 2px solid @ground-active;
+			border-left: none;
+		  }
+		}
+
+		&.groundDisabled {
+		  width: 100%;
+
+		  &:before {
+			width: 20px;
+			height: 100%;
+			top: 0;
+			right: 50%;
+			border-top: 2px solid @ground-disabled;
+			border-left: none;
 		  }
 		}
 	  }
 	}
   }
 }
-

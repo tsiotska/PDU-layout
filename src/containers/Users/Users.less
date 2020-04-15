@@ -2,45 +2,49 @@
 
 .UsersWrapper {
   #flex-start;
-  width: 100%;
   height: 100%;
 
-  .AdminWrapper {
-	width: 450px;
-	padding: @padding-desktop;
+  .component {
+	height: 100%;
+	width: 100%;
 
-	.head .icon {
-	  display: none;
-	}
+	.AdminWrapper {
+	  width: 450px;
+	  padding: @padding-desktop;
 
-	.container {
-
-	  .inputContainer {
-		margin-top: @margin-block;
-
-		.row {
-		  #flex-space-between;
-		  margin-top: @margin-label;
-
-		  .label {
-			color: @text-muted;
-		  }
-		}
+	  .head .icon {
+		display: none;
 	  }
 
-	  .switchContainer {
-		.row {
+	  .container {
+
+		.inputContainer {
 		  margin-top: @margin-block;
-		  #flex-start-centered;
 
-		  .label {
-			margin-left: @margin-label;
+		  .row {
+			#flex-space-between;
+			margin-top: @margin-label;
+
+			.label {
+			  color: @text-muted;
+			}
 		  }
 		}
-	  }
 
-	  .buttonContainer {
-		margin-top: @margin-button;
+		.switchContainer {
+		  .row {
+			margin-top: @margin-block;
+			#flex-start-centered;
+
+			.label {
+			  margin-left: @margin-label;
+			}
+		  }
+		}
+
+		.buttonContainer {
+		  margin-top: @margin-button;
+		}
 	  }
 	}
   }
@@ -67,60 +71,63 @@
 	  }
 	}
 
-	.AdminWrapper {
-	  #flex-start-centered;
-	  flex-direction: column;
-	  width: 100%;
-	  height: 100%;
-	  padding: @padding-mobile;
+	.component {
 
-	  .head {
+	  .AdminWrapper {
 		#flex-start-centered;
+		flex-direction: column;
 		width: 100%;
-
-		.icon {
-		  display: flex;
-		}
-
-		.title {
-		  margin-left: @margin-label;
-		  align-self: unset;
-		}
-	  }
-
-	  .container {
 		height: 100%;
+		padding: @padding-mobile;
 
-		.inputContainer {
-		  margin: 0;
+		.head {
+		  #flex-start-centered;
+		  width: 100%;
 
-		  .row {
-			flex-direction: column;
-			align-items: flex-start;
+		  .icon {
+			display: flex;
+		  }
 
-			&:not(:first-child) {
-			  margin-top: @margin-block;
-			}
-
-			.formInput {
-			  width: @mobile-element;
-			}
-
-			.label {
-			  margin-bottom: @margin-label;
-			}
+		  .title {
+			margin-left: @margin-label;
+			align-self: unset;
 		  }
 		}
 
-		.switchContainer {
-		  // margin-top: @margin-block;
-		}
+		.container {
+		  height: 100%;
 
-		.buttonContainer {
-		  margin-top: auto;
+		  .inputContainer {
+			margin: 0;
 
-		  .button {
-			width: @mobile-element;
+			.row {
+			  flex-direction: column;
+			  align-items: flex-start;
+
+			  &:not(:first-child) {
+				margin-top: @margin-block;
+			  }
+
+			  .formInput {
+				width: @mobile-element;
+			  }
+
+			  .label {
+				margin-bottom: @margin-label;
+			  }
+			}
+		  }
+
+		  .switchContainer {
+			// margin-top: @margin-block;
+		  }
+
+		  .buttonContainer {
+			margin-top: auto;
+
+			.button {
+			  width: @mobile-element;
+			}
 		  }
 		}
 	  }
