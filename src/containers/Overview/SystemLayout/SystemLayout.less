@@ -1,4 +1,3 @@
-@import '../../../globalStyles/variables/variables';
 @import '../../../globalStyles/mixins/mixins';
 
 .systemDescription {
@@ -9,19 +8,21 @@
   }
 
   .container {
-	#flex-start;
+	#flex-space-around;
+	align-items: flex-start;
 	flex-wrap: wrap;
+	width: 100%;
 
 	> .row {
-	  justify-content: flex-start;
-	  flex-wrap: wrap;
-	  margin-top: 20px;
+	  #flex-space-around;
+	  align-items: flex-start;
+	  flex-grow: 1;
+	  margin-top: @margin-block;
 
 	  > .column {
-		width: 250px;
-		//margin: 20px;
+		max-width: 250px;
 
-		.Software { // > .column       Its unicum.
+		.Software { // > .column
 		  margin-top: 35px;
 		}
 	  }
@@ -43,8 +44,8 @@
   }
 
   .label {
-	min-width: 100px; //Remove to break aligning text
 	#fontStack2;
+	min-width: 100px;
 	margin: 5px;
   }
 
@@ -57,19 +58,25 @@
 
 @media screen and (max-width: 767px) {
   .systemDescription {
-	padding: 3vh 3vw;
-	margin-top: 10px;
+	#flex-center;
+	flex-direction: column;
+	padding: @padding-mobile;
+	margin-top: @margin-label;
 
 	.container {
 	  flex-direction: column;
 	  justify-content: space-around;
+	  width: fit-content;
 
-	  .row {
+	  > .row {
+		flex-direction: column;
+		margin-top: 0;
+
 		.column {
-		  margin-top: 10px;
+		  margin-top: @margin-label;
 
-		  .Software { // > .column
-			margin-top: 10px;
+		  .Software {
+			margin-top: @margin-label;
 		  }
 		}
 	  }

@@ -1,9 +1,9 @@
 @import '../../globalStyles/mixins/mixins';
 
 .LogsWrapper {
-  padding: 20px 40px;
+  padding: @padding-desktop;
 
-  > .row:first-child { //The first row with title
+ .head {
 	justify-content: space-between;
 	width: 100%;
 
@@ -13,9 +13,9 @@
 	}
   }
 
-  .column {
+  .container {
 	width: 100%;
-	margin-top: 20px;
+	margin-top: @margin-block;
 
 	.labels {
 	  color: @text-muted;
@@ -42,19 +42,19 @@
 
 @media screen and (max-width: 767px) {
   .LogsWrapper {
-	padding: 3vh 3vw;
+	padding: @padding-mobile;
 
-	> .row:first-child {
+	.head {
 	  flex-direction: column;
 
 	  .btnGroup {
 		justify-content: space-around;
 		width: 100%;
-		margin-top: 20px;
+		margin-top: @margin-block;
 	  }
 	}
 
-	.column {
+	.container {
 	  .labels {
 		display: none
 	  }
@@ -67,12 +67,12 @@
 		  margin-top: 10px;
 		}
 
-		//aligning Type. Maybe give them class names.
+		// Maybe give them more precisely class names. (time, type, message)
 		.fieldMerger {
 		  .value {
 			color: @text-muted;
 
-			&:nth-child(2) {
+			&:nth-child(2) { //aligning Type.
 			  display: flex;
 			  justify-content: flex-end;
 			}

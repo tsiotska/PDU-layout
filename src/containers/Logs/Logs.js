@@ -6,7 +6,7 @@ export default class Logs extends Component {
 		return (
 			<div className="LogsWrapper">
 
-				<div className="row">
+				<div className="row head">
 					<div className="title">Logs</div>
 					<div className="row btnGroup">
 						<Button value="Refresh"/>
@@ -15,8 +15,7 @@ export default class Logs extends Component {
 					</div>
 				</div>
 
-
-				<div className="column">
+				<div className="column container">
 					<div className="row labels">
 						<div className="fieldMerger">
 							<div className="label">Time</div>

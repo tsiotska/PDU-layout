@@ -1,12 +1,12 @@
 import {Button, Input, Switch} from '../../patterns';
-import Cross from "../../assets/round-close.svg";
+import Arrow from "../../assets/baseline-arrow-back.svg";
 
 const Admin = ({turnBack}) => {
 	return (
 		<div className="AdminWrapper">
 
 			<div className="row head">
-				<Cross onClick={turnBack} className="icon"/>
+				<Arrow onClick={turnBack} className="icon"/>
 				<div className="title">
 					User Settings
 				</div>

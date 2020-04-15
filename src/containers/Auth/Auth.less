@@ -1,4 +1,3 @@
-@import '../../globalStyles/variables/variables';
 @import '../../globalStyles/mixins/mixins';
 
 .AuthWrapper {
@@ -19,7 +18,8 @@
 		width: 100%;
 		height: 150px;
 
-		.logo {}
+		.logo {
+		}
 	  }
 
 	  .fields {
@@ -40,3 +40,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .AuthWrapper {
+	.fields {
+	  .button {
+		width: @mobile-element;
+	  }
+	}
+  }
+}

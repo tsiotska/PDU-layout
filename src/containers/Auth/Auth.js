@@ -1,4 +1,4 @@
-import { Input, Button } from '../../patterns';
+import {Input, Button} from '../../patterns';
 
 export default function Auth(props) {
 	return (<div className="AuthWrapper">
@@ -6,14 +6,14 @@ export default function Auth(props) {
 
 			<div className="column">
 				<div className="logoContainer">
-					<img src="../../assets/logoBlack.png" className="logo" />
+					<img src="../../assets/logoBlack.png" className="logo"/>
 				</div>
 
 				<div className="fields">
 					<p className="title">Login Now</p>
-					<Input class={'authInput long'} placeholder={'User Name'} type={'text'} />
-					<Input class={'authInput long'} placeholder={'Password'} type={'password'} />
-					<Button class={'button'} type={'submit'} value={'Login'} />
+					<Input class="authInput long" placeholder="User Name" type="text"/>
+					<Input class="authInput long" placeholder="Password" type="password"/>
+					<Button class="button small" type="submit" value="Login"/>
 				</div>
 			</div>
 		</form>

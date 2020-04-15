@@ -12,8 +12,8 @@
   padding: @padding-desktop;
 
   .table {
-	width: 90%;
-	padding: 20px 0;
+	max-width: 100%;
+	margin-top: @margin-block;
 
 	.row { //default for every row inside a table.
 	  justify-content: space-between;
@@ -31,18 +31,18 @@
 		> .row { //We have three rows inside every column
 		  margin-top: 15px;
 
-		  .label { //for all labels
+		  .label { //for ALL labels
 			#fontStack6;
 		  }
 
-		  > .label { //labels at first two row, scroll down to see labels at columns
+		  > .label { //labels at first two row, also we have labels at columns (third row 84line)
 			display: flex;
 			align-items: center;
 			min-width: @label-width;
 			padding: 8px;
 		  }
-
-		  &:first-child { //Defining properties for each of three rows
+		  //Defining properties for each of three rows
+		  &:first-child {
 			justify-content: flex-start;
 
 			> .row {
@@ -81,7 +81,7 @@
 		  }
 
 		  &:nth-child(3) {
-			.column .label { //labels at column
+			.column .label {  //labels at column
 			  min-width: @label-width;
 			  padding: 8px;
 
@@ -194,6 +194,7 @@
 
 @media screen and (max-width: 767px) {
   .OverviewWrapper {
+	align-items: center;
 	padding: @padding-mobile;
 
 	.table {
@@ -205,15 +206,15 @@
 		flex-direction: column;
 
 		> .column {
-		  margin-top: 15px;
 
 		  &:first-child { //HARD override
 			width: 100%;
 		  }
 
-		  width: 100%; //And for others
+		  margin-top: 15px;
+		  width: 100%; //And for others columns
 
-		  &:nth-child(2), &:nth-child(3) {
+		  &:nth-child(2), &:nth-child(3) { //Require refactoring
 			> .row {
 
 			  &:first-child, &:nth-child(2) {
