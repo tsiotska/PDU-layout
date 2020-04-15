@@ -11,7 +11,7 @@ const MQTT = () => (
 				<p className="label">Enable MQTT</p>
 			</div>
 
-			<div className="inputContainer">
+			<div className="column inputContainer">
 				<div className="row">
 					<p className="label">MQTT mode</p>
 					<div><Select class="select long" options={['Generic', 'MS Azure']}/></div>
@@ -33,7 +33,7 @@ const MQTT = () => (
 				<p className="label">Use credentials</p>
 			</div>
 
-			<div className="inputContainer">
+			<div className="column inputContainer">
 				<div className="row">
 					<p className="label">Username</p>
 					<div><Input class="formInput long"/></div>
@@ -45,7 +45,7 @@ const MQTT = () => (
 				</div>
 			</div>
 
-			<div className="checkboxContainer">
+			<div className="column checkboxContainer">
 				<div className="row">
 					<div><Checkbox/></div>
 					<p className="label">Use SSL</p>
