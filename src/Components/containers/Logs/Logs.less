@@ -1,0 +1,84 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.LogsWrapper {
+  padding: @padding-desktop;
+
+ .head {
+	justify-content: space-between;
+	width: 100%;
+
+	.btnGroup {
+	  #flex-space-between;
+	  width: 260px;
+	}
+  }
+
+  .container {
+	width: 100%;
+	margin-top: @margin-block;
+
+	.labels {
+	  color: @text-muted;
+	}
+
+	.row:nth-child(2n) {
+	  background-color: @third-color;
+	}
+
+	.row {
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	  min-height: 32px;
+	  padding: 0 20px;
+
+	  .fieldMerger, .label, .value { // or simplify for all -> div
+		#flex-start;
+		width: 100%;
+	  }
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .LogsWrapper {
+	padding: @padding-mobile;
+
+	.head {
+	  flex-direction: column;
+
+	  .btnGroup {
+		justify-content: space-around;
+		width: 100%;
+		margin-top: @margin-block;
+	  }
+	}
+
+	.container {
+	  .labels {
+		display: none
+	  }
+
+	  .row {
+		flex-wrap: wrap;
+		padding: 10px;
+
+		.message { //  > .value
+		  margin-top: 10px;
+		}
+
+		// Maybe give them more precisely class names. (time, type, message)
+		.fieldMerger {
+		  .value {
+			color: @text-muted;
+
+			&:nth-child(2) { //aligning Type.
+			  display: flex;
+			  justify-content: flex-end;
+			}
+		  }
+		}
+	  }
+	}
+  }
+}

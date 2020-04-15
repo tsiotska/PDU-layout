@@ -1,0 +1,55 @@
+@import '../../../../globalStyles/mixins/mixins';
+
+.DateWrapper {
+
+  .container {
+	width: 400px;
+
+	.inputGroup {
+	  .row {
+		#flex-space-between;
+		margin-top: @margin-block;
+
+		.label {
+		  #fontStack2;
+		}
+	  }
+	}
+
+	.buttonContainer {
+	  margin-top: @margin-button;
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .DateWrapper {
+	#flex-column-start;
+	align-items: center;
+	height: 100%;
+
+	.container {
+	  height: 100%;
+	  width: 100%;
+
+	  .inputGroup {
+		.row {
+		  flex-direction: column;
+		  align-items: flex-start;
+
+		  &:not(:first-child) {
+			margin-top: @margin-block;
+		  }
+		}
+	  }
+
+	  .buttonContainer {
+		margin-top: auto;
+
+		.button {
+		  width: 280px;
+		}
+	  }
+	}
+  }
+}
