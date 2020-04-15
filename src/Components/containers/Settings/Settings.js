@@ -1,6 +1,6 @@
-import { Component } from 'preact';
-import { Link } from 'preact-router/match';
-import { Network, Date, Firmware } from './Tabs';
+import {Component} from 'preact';
+import {Link} from 'preact-router/match';
+import {Network, Date, Firmware} from './Tabs';
 
 
 export default class Settings extends Component {
@@ -12,17 +12,17 @@ export default class Settings extends Component {
 	};
 
 	subComponents = {
-		Network: <Network />,
-		Date: <Date />,
-		Firmware: <Firmware />
+		Network: <Network/>,
+		Date: <Date/>,
+		Firmware: <Firmware/>
 	};
 
 	get component() {
 		const {page} = this.props;
-		return page && page!==':page' ? this.subComponents[page] : this.subComponents.Network;
+		return page && page !== ':page' ? this.subComponents[page] : this.subComponents.Network;
 	};
 
-	render({ page }) {
+	render({page}) {
 
 		return (
 			<div className="SettingsWrapper">

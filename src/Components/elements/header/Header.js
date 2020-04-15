@@ -1,9 +1,11 @@
 import {Dropdown} from '../../../globalStyles/patterns';
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../../constants';
+
 import Hamburger from '../../../assets/round-menu.svg';
 import UserIcon from '../../../assets/outline-account-circle.svg';
 import Cross from '../../../assets/round-close.svg';
+import LogOut from '../../../assets/bx-log-out-circle.svg';
 
 const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserProfile, languages}) => (
 	<div className="header">
@@ -26,14 +28,14 @@ const Header = ({isSidebarOpened, isUserMenuOpened, toggleSidebar, toggleUserPro
 
 			<Link className="element" href={ROUTE.PROFILE}>
 				<div className="iconContainer">
-					<img className="icon" src="../../../assets/outline-account-circle.svg" alt="user-outlined"/>
+					<UserIcon className="icon" />
 				</div>
 				<p className="label"> UserName </p>
 			</Link>
 
 			<Link className="element" href={ROUTE.LOGIN}>
 				<div className="iconContainer">
-					<img className="icon" src="../../../assets/bx-log-out-circle.svg" alt="user-outlined"/>
+					<LogOut className="icon"/>
 				</div>
 				<p className="label"> Sign Out</p>
 			</Link>

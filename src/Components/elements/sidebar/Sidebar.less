@@ -13,7 +13,7 @@
 
 	.navLink {
 
-	  ~.languages { //&:last-child
+	  ~ .languages { //&:last-child
 		margin-top: auto;
 	  }
 
@@ -56,7 +56,12 @@
 		  margin-left: 10px;
 		}
 	  }
+//I wanted to delete this. Resizing specific icons must have been refactored in SVG
+	  &:nth-child(6) .contextContainer .iconContainer .icon, &:nth-child(2) .contextContainer .iconContainer .icon {
+		width: 24px;
+	  }
 	}
+
 
 	.is-active {
 	  background-color: @primary-color;

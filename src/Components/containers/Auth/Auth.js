@@ -6,7 +6,7 @@ export default function Auth(props) {
 
 			<div className="column">
 				<div className="logoContainer">
-					<img src="../../../assets/logoBlack.png" className="logo"/>
+					<img src="../../../assets/logoBlack.png" className="logo" alt="logo"/>
 				</div>
 
 				<div className="fields">

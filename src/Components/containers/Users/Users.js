@@ -1,6 +1,7 @@
 import {Component, createRef} from 'preact';
 import {Link} from 'preact-router/match';
 import {Button} from '../../../globalStyles/patterns';
+import Cross from "../../../assets/round-close.svg";
 import Admin from './Admin';
 
 export default class Users extends Component {
@@ -50,7 +51,7 @@ export default class Users extends Component {
 						<Link href={`/users/${this.subRoutes.Admin}`} activeClassName="is-active" className="tab">Admin</Link>
 						<Link activeClassName="is-active" className="tab">
 							Guest
-							<img src="../../assets/round-close.svg" className="crossIcon" alt="close"/>
+							<Cross className="crossIcon"/>
 						</Link>
 						<div className="tabBtn"><Button class="middle disabled" value="Create user"/></div>
 					</div>
