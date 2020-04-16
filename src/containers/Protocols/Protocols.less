@@ -1,0 +1,33 @@
+@import '../../globalStyles/mixins/mixins';
+@import "Tabs/SNMP";
+@import "Tabs/MQTT";
+
+//panel styles is in global styles.
+
+.ProtocolsWrapper {
+  #flex-start;
+  width: 100%;
+  height: 100%;
+
+  .snmpWrapper, .mqttWrapper {
+	padding: @padding-desktop;
+
+	.head .title {
+	  align-self: center;
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ProtocolsWrapper {
+	#flex-column-start;
+
+	.snmpWrapper, .mqttWrapper {
+	  padding: @padding-mobile;
+
+	  .head .title {
+		display: none;
+	  }
+	}
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.authInput {
+  #fontStack1;
+  height: 32px;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: @primary-color;
+}
+
+.formInput {
+  #fontStack5;
+  color: @fourth-color;
+  height: 32px;
+  padding: 3px 2px;
+  border: 1px solid #cccccc;
+  background-color: @primary-color;
+
+  &:focus{
+	outline: none;
+  }
+}
+
+.authInput.short, .formInput.short{
+  width: 180px;
+}
+
+.authInput.middle, .formInput.middle{
+  width: 240px;
+}
+
+.authInput.long, .formInput.long{
+  width: 280px;
+}

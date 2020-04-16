@@ -1,0 +1,86 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.systemDescription {
+  width: 100%;
+
+  .title {
+	margin-top: @margin-block;
+  }
+
+  .container {
+	#flex-space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+
+	> .row {
+	  #flex-space-around;
+	  align-items: flex-start;
+	  flex-grow: 1;
+	  margin-top: @margin-block;
+
+	  > .column {         //Look how it wraps! Must be like square
+		max-width: 250px; //can't understand better way (100% isnt correct..)
+		flex-grow: 1;
+
+		.Software { // > .column
+		  margin-top: 35px;
+		}
+	  }
+	}
+  }
+
+  .row {
+	display: flex;
+  }
+
+  .column {
+	display: flex;
+	flex-direction: column;
+  }
+
+  .heading {
+	#fontStack4;
+	margin: 5px;
+  }
+
+  .label {
+	#fontStack2;
+	min-width: 100px;
+	margin: 5px;
+  }
+
+  .value {
+	#fontStack2;
+	color: @text-visible;
+	margin: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .systemDescription {
+	#flex-center;
+	flex-direction: column;
+	padding: @padding-mobile;
+	margin-top: @margin-label;
+
+	.container {
+	  flex-direction: column;
+	  justify-content: space-around;
+	  width: fit-content;
+
+	  > .row {
+		flex-direction: column;
+		margin-top: 0;
+
+		.column {
+		  margin-top: @margin-label;
+
+		  .Software {
+			margin-top: @margin-label;
+		  }
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,114 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.NetworkWrapper {
+
+  .container {
+	.form {
+	  width: 400px;
+	  margin-top: @margin-block;
+
+	  .row {
+		margin-top: @margin-label;
+	  }
+
+	  .inputContainer {
+		&.nested {
+		  margin-left: @margin-block;
+		}
+
+		.row {
+		  #flex-space-between;
+
+		  .label {
+			#fontStack2;
+		  }
+
+		  .value {
+			width: @mobile-element;
+		  }
+		}
+	  }
+
+	  .radioContainer {
+		margin: @margin-label 0;
+		.row {
+		  #flex-start-centered;
+		  width: 100%;
+		}
+	  }
+
+	  .buttonContainer {
+		margin-top: @margin-button;
+	  }
+	}
+
+	.footer {
+	  border-top: 2px solid @third-color;
+	  margin-top: @margin-block;
+	  padding-top: @margin-block;
+
+	  .row {
+		align-items: center;
+
+		.label {
+		  margin-left: @margin-label;
+		}
+	  }
+
+	  .warning {
+		margin-top: @margin-label;
+	  }
+	}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .NetworkWrapper {
+	#flex-column-start;
+
+	.container {
+	  align-items: center;
+
+	  .form {
+		align-items: center;
+		width: fit-content;
+		margin: 0;
+
+
+		.inputContainer {
+		  &:first-child .row:first-child {
+			margin: 0;
+		  }
+
+		  &.nested {
+			margin-left: 0;
+		  }
+
+		  .row {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: @margin-block;
+
+			.label {
+			  margin-bottom: @margin-label;
+			}
+		  }
+		}
+
+		.radioContainer {
+		  width: @mobile-element;
+
+		  .row {
+			margin-top: @margin-block;
+		  }
+		}
+
+		.buttonContainer {
+		  .button {
+			width: @mobile-element;
+		  }
+		}
+	  }
+	}
+  }
+}

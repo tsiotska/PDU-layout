@@ -19,7 +19,6 @@
     "preact-cli": "^2.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "preact": "10.3.4",
     "preact-redux": "2.1.0",
     "preact-resize-observer": "^1.0.0",

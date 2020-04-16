@@ -6,8 +6,8 @@ import store from './store';
 import './globalStyles/index.less';
 
 import {ROUTE} from './constants';
-import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile, Languages} from './Components/containers';
-import {Header, Sidebar} from './Components/elements';
+import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile, Languages} from './containers';
+import {Header, Sidebar} from './Components';
 
 import ResizeObserver from 'preact-resize-observer';
 

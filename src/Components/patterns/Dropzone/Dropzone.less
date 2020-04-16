@@ -1,0 +1,29 @@
+@import '../../../globalStyles/mixins/mixins';
+
+.Dropzone {
+  #flex-center;
+  height: 40px;
+  min-width: 80px;
+  max-width: 280px;
+  border-radius: 4px;
+  background-color: @fourth-color;
+
+  &:hover{
+	opacity: 0.9;
+	cursor: pointer;
+  }
+
+  .inputfile {
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+  }
+
+  label {
+	#flex-center;
+	#fontStack2;
+	color: @primary-color;
+  }
+}
