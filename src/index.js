@@ -7,7 +7,7 @@ import './globalStyles/index.less';
 
 import {ROUTE} from './constants';
 import {Logs, Outlets, Overview, Protocols, Settings, Users, Auth, Profile, Languages} from './containers';
-import {Header, Sidebar} from './Components';
+import {Header, Sidebar} from './containers';
 
 import ResizeObserver from 'preact-resize-observer';
 
@@ -26,21 +26,23 @@ class Main extends Component {
 	sidebarRef = createRef();
 
 	/*This feature fixes simple adaptive issues,
-	it was in sidebar, but then i thought it could be helpful for you*/
+	it was in Sidebar, but then i thought it could be helpful for you*/
 
 	handleResize = (width) => {
+		const {isItMobile} = this.state;
+
 		//If we go from mobile to pc.
-		if (width > 767 && this.state.isItMobile) {
+		if (width > 767 && isItMobile) {
 			this.setState({
-				isItMobile: !this.state.isItMobile,
+				isItMobile: !isItMobile,
 			})
 			//Then from pc to mobile
-		} else if (width <= 767 && !this.state.isItMobile) {
+		} else if (width <= 767 && !isItMobile) {
 			this.setState({
-				isItMobile: !this.state.isItMobile,
+				isItMobile: !isItMobile,
 				isSidebarOpened: false,
 			});
-			//If sidebar was opened, let him be closed...
+			//If Sidebar was opened, let him be closed...
 			if (this.sidebarRef.current.classList.value.includes('sidebarVisible')) {
 				this.sidebarRef.current.classList.toggle('sidebarVisible');
 			}
@@ -56,7 +58,7 @@ class Main extends Component {
 		this.setState({isUserMenuOpened: !this.state.isUserMenuOpened})
 	};
 
-	//Auth router must be outside of header and sidebar! Rrr
+	//Auth router must be outside of Header and Sidebar! Rrr
 	render({}, {isSidebarOpened, isUserMenuOpened, isItMobile, languages}) {
 		return (
 			<ResizeObserver class="fluid-content" onResize={this.handleResize}>

@@ -1,4 +1,4 @@
-import { Button, Input, Select } from '../../../Components/patterns';
+import { Button, Input, Select } from '../../../components';
 
 function Date() {
 	return (

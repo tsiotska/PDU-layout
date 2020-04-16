@@ -1,4 +1,4 @@
-import {Dropdown} from '../patterns';
+import {Dropdown} from '../../components';
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../constants';
 

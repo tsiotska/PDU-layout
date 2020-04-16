@@ -1,4 +1,4 @@
-import {Button, Input, Switch, Select, Checkbox} from '../../../Components/patterns';
+import {Button, Input, Switch, Select, Checkbox} from '../../../components';
 
 const MQTT = () => (
 	<div className="mqttWrapper">

@@ -19,8 +19,8 @@
 	  flex-grow: 1;
 	  margin-top: @margin-block;
 
-	  > .column {         //Look how it wraps! Must be like square
-		max-width: 250px; //can't understand better way (100% isnt correct..)
+	  > .column {
+		max-width: 250px; //workaround? Look how it wraps! Must be like square
 		flex-grow: 1;
 
 		.Software { // > .column
@@ -39,21 +39,23 @@
 	flex-direction: column;
   }
 
+  .heading, .label, .value {
+	margin: 5px;
+  }
+
   .heading {
 	#fontStack4;
-	margin: 5px;
   }
 
   .label {
 	#fontStack2;
-	min-width: 100px;
-	margin: 5px;
+	min-width: 100px; //and here workaround :(
   }
 
   .value {
 	#fontStack2;
 	color: @text-visible;
-	margin: 5px;
+
   }
 }
 

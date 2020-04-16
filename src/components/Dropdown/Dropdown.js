@@ -22,7 +22,7 @@ const Dropdown = (props) => {
 				{
 					props.list && props.list.map((item) => (
 						<div className="item" onClick={() => changeValue(item)}>
-							<input className="radio" type="radio"/>
+							<input className="radio" type="radio" checked={selectedValue === item}/>
 							<div className={"label " + (selectedValue === item ? "On" : "")}>{item}</div>
 						</div>))
 				}

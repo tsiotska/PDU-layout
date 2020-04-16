@@ -1,5 +1,5 @@
 import {Component} from 'preact';
-import {RadioButton, Switch, TextBox} from '../../Components/patterns';
+import {RadioButton, Switch, TextBox} from '../../components';
 import Output from '../../assets/output.svg';
 
 export default class Outlets extends Component {

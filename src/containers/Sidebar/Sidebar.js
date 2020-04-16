@@ -1,6 +1,5 @@
 import {Link} from 'preact-router/match';
 import {ROUTE} from '../../constants';
-//import {Dropdown} from '../../patterns';
 import Earth from "../../assets/earth-outline.svg";
 
  const Sidebar = ({toggleSidebar, sidebarRef, isItMobile}) => {

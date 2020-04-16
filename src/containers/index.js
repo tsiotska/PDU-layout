@@ -7,3 +7,6 @@ export { default as Users } from './Users/Users';
 export { default as Auth } from './Auth/Auth';
 export { default as Profile } from './Profile/Profile';
 export { default as Languages } from './Languages/Languages';
+
+export { default as Header } from './Header/Header';
+export { default as Sidebar } from './Sidebar/Sidebar';

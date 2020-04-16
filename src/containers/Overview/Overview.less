@@ -3,7 +3,11 @@
 @ground-active: #f2ec33;
 @ground-disabled: #d6d6d6;
 
+// Only the first column must have labels on desktop, but on mobile every
 @label-width: 100px;
+
+
+/*some badly but its workable.*/
 
 .OverviewWrapper {
   #flex-column-start;
@@ -23,7 +27,7 @@
 	.grid {
 	  #flex-start-centered;
 
-	  .outletContainer { //Three column at all
+	  .outletContainer { //Three column at all   >.column
 		flex-grow: 1;
 		height: 100%;
 
@@ -34,7 +38,7 @@
 			#fontStack6;
 		  }
 
-		  > .label { //labels at first two row, also we have labels at columns (third row 84line)
+		  > .label { //labels at first two row, also we have labels at columns (third row 86line)
 			display: flex;
 			align-items: center;
 			min-width: @label-width;

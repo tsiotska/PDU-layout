@@ -1,4 +1,4 @@
-import { RadioButton, Input, Button } from '../../../Components/patterns';
+import { RadioButton, Input, Button } from '../../../components';
 
 function NetworkConfig() {
 	return (

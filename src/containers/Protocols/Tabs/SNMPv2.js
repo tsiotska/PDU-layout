@@ -1,4 +1,4 @@
-import {Switch, Input, Button} from '../../../Components/patterns';
+import {Switch, Input, Button} from '../../../components';
 
 const SNMPv2 = () => (
 	<div className="snmpWrapper">

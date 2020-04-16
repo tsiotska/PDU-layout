@@ -1,6 +1,6 @@
 import {Component, createRef} from 'preact';
 import {Link} from 'preact-router/match';
-import {Button} from '../../Components/patterns';
+import {Button} from '../../components';
 import Cross from "../../assets/round-close.svg";
 import Admin from './Admin';
 

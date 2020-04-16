@@ -1,4 +1,4 @@
-import {Button, RadioButton} from "../../Components/patterns";
+import {Button, RadioButton} from "../../components";
 
 const Languages = ({languages}) => (
 	<div className="langWrapper">

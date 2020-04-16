@@ -1,4 +1,4 @@
-import { Dropzone, Button } from '../../../Components/patterns';
+import { Dropzone, Button } from '../../../components';
 
 function Firmware() {
 	return (

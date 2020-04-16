@@ -1,4 +1,4 @@
-import {Input, Button} from '../../Components/patterns';
+import {Input, Button} from '../../components';
 
 export default function Auth(props) {
 	return (<div className="AuthWrapper">

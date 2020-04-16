@@ -1,6 +1,6 @@
 import {Link} from "preact-router/match";
 import {ROUTE} from "../../constants";
-import {Button, Input} from "../../Components/patterns";
+import {Button, Input} from "../../components";
 import SignOut from '../../assets/bx-log-out-circle.svg';
 
 const Profile = () => (

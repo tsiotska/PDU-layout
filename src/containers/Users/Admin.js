@@ -1,4 +1,4 @@
-import {Button, Input, Switch} from '../../Components/patterns';
+import {Button, Input, Switch} from '../../components';
 import Arrow from "../../assets/baseline-arrow-back.svg";
 
 const Admin = ({turnBack}) => {
