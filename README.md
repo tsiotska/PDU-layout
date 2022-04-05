@@ -1,8 +1,9 @@
 # Pdu Front
 
-Start a live-reload development server:**
+Install dependencies and start a live-reload development server:**
 
 ```sh
-PORT=8080 npm run dev
+npm install
+npm start
 ```
 
